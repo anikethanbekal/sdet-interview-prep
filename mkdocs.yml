@@ -55,6 +55,7 @@ nav:
       - Reliability: system-design/reliability.md # Example: Add more content files
   - Testing:
       - Selenium: testing/selenium.md
+      - Test: testing/Test.md
 
 # Markdown extensions - expanded for richer content
 markdown_extensions:
@@ -72,7 +73,6 @@ markdown_extensions:
   - pymdownx.emoji: # For emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - codehilite
   - pymdownx.superfences
   - admonition # Callouts (Notes, Warnings, Tips)
   - footnotes # Standard footnotes
