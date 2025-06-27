@@ -26,3 +26,7 @@ To check yml syntax add extensions
     yaml (redhat)
     VSCode settings -> click on open settings json icon -> add parameter (refer note website and copy paste)
     To verify when you mousehover on the mkdocs.yml there is a link or extra info you get.
+
+To host
+in yml
+    repo_name and repo_url to be mentioned

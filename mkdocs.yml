@@ -34,8 +34,8 @@ theme:
     - header.autohide # Hides the header on scroll down, shows on scroll up
 
 # Repository information (highly recommended for open-source projects)
-repo_name: YourName/coding-practice-hub # Update with your GitHub username/repo
-repo_url: https://github.com/YourName/coding-practice-hub # Update with your full GitHub repo URL
+repo_name: anikethanbekal/interview-cheatsheet # Update with your GitHub username/repo
+repo_url: https://anikethanbekal.github.io/interview-cheatsheet # Update with your full GitHub repo URL
 
 # Navigation structure - keep it clean and logical
 nav:
