@@ -8,7 +8,7 @@ tags:
 categories:
   - Programming
 intro: |
-  This cheat sheet is a crash course for Selenium beginners and help to get the idea about the basic concepts of Selenium.
+  Test
 ---
 
 ## Getting Started
