@@ -1,0 +1,67 @@
+/* Custom CSS for Unified Coding Hub */
+
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Dark mode toggle - example */
+/* For a proper dark mode toggle, refer to Material for MkDocs documentation on "Theming" */
+/* This is just a simple example to show where custom CSS goes */
+.md-header__button.md-icon:last-of-type {
+    cursor: pointer;
+}
+
+/* Enhance admonitions (Notes, Tips, Warnings) */
+.md-typeset .admonition {
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset .admonition.note {
+    background-color: #e0f2f7; /* Light blue */
+    border-left: 5px solid #2196f3; /* Blue */
+}
+
+.md-typeset .admonition.tip {
+    background-color: #e8f5e9; /* Light green */
+    border-left: 5px solid #4caf50; /* Green */
+}
+
+/* Style for code blocks */
+.md-typeset pre > code {
+    border-radius: 8px;
+    padding: 1.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Custom button styles (if you add custom buttons) */
+.custom-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem 0;
+    background-color: #5c6bc0; /* Indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #3f51b5; /* Darker indigo */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .md-header__topic {
+        display: none; /* Hide topic title on small screens */
+    }
+}

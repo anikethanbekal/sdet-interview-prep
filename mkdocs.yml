@@ -1,0 +1,90 @@
+site_name: Unified Coding Hub
+site_description: All-in-one DSA, SDET, and System Design Notes
+site_author: Your Name # Remember to update this to your actual name!
+
+# Theme configuration with advanced features
+theme:
+  name: material
+  palette:
+    # Scheme can be 'default' or 'slate' (for dark mode)
+    # We'll set up a toggle later for better control
+    scheme: default
+    primary: indigo
+    accent: lime
+  font:
+    text: Inter
+    code: Fira Code # A popular monospaced font for code readability
+  icon:
+    logo: material/book-education # A nice icon for the site logo
+    repo: fontawesome/brands/github # If you host on GitHub, this will add a GitHub icon to your repo link
+  features:
+    - navigation.sections # Groups top-level nav items for better organization
+    - navigation.expand # Expands all navigation sections by default
+    - navigation.indexes # Allows 'index.md' files to represent a section in nav
+    - navigation.path # Shows the current page's path in the header
+    - navigation.top # Adds a scroll-to-top button
+    - search.suggest # Improves search suggestions
+    - search.highlight # Highlights search terms in results
+    - search.share # Adds a share button to search results (optional)
+    - content.code.copy # Adds a copy-to-clipboard button to code blocks (Note: This feature often relies on pymdownx.superfences for full functionality.)
+    - content.code.annotate # Allows inline annotations for code
+    - content.tabs.link # Makes tabs in markdown linkable
+    - content.footnote.tooltips # Footnotes appear as tooltips on hover
+    - toc.integrate # Integrates table of contents into the navigation pane
+    - header.autohide # Hides the header on scroll down, shows on scroll up
+
+# Repository information (highly recommended for open-source projects)
+repo_name: YourName/coding-practice-hub # Update with your GitHub username/repo
+repo_url: https://github.com/YourName/coding-practice-hub # Update with your full GitHub repo URL
+
+# Navigation structure - keep it clean and logical
+nav:
+  - Home: index.md
+  - DSA:
+      - Introduction: dsa/intro.md
+      - Data Structures: dsa/data_structures.md # Example: Add more content files
+      - Algorithms: dsa/algorithms.md # Example: Add more content files
+  - SDET:
+      - Introduction: sdet/intro.md
+      - Testing Fundamentals: sdet/testing_fundamentals.md # Example: Add more content files
+      - Automation: sdet/automation.md # Example: Add more content files
+      - Tools and Technologies: sdet/tools.md # Example: Add more content files
+  - System Design:
+      - Basics: system-design/intro.md
+      - Scalability: system-design/scalability.md # Example: Add more content files
+      - Reliability: system-design/reliability.md # Example: Add more content files
+  - Testing:
+      - Selenium: testing/selenium.md
+
+# Markdown extensions - expanded for richer content
+markdown_extensions:
+  - pymdownx.highlight: # Enhanced code highlighting
+      anchor_linenums: true
+
+  # This means Mermaid/PlantUML diagrams and some code block enhancements will not work.
+  - pymdownx.arithmatex: # For LaTeX/math equations
+      generic: true
+  - pymdownx.details # Collapsible sections
+  - pymdownx.tabbed: # Tabbed content
+      alternate_style: true
+  - pymdownx.tasklist: # Checklists
+      custom_checkbox: true
+  - pymdownx.emoji: # For emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - codehilite
+  - pymdownx.superfences
+  - admonition # Callouts (Notes, Warnings, Tips)
+  - footnotes # Standard footnotes
+  - toc: # Table of contents
+      permalink: true
+  - attr_list # Allows adding HTML attributes to markdown elements
+  - md_in_html # Allows markdown inside HTML
+  - def_list # Definition lists
+  - tables # Standard tables
+
+# Customization - where you link your CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
