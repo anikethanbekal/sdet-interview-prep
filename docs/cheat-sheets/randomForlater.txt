@@ -1,0 +1,41 @@
+Dynamic xPath:
+    //*[@type='submit'] → any tag with type submit
+    //h2[contains(@id, 'ageCont')] → selects id that contains ageCont value
+    (//h2[starts-with(@id, 'u_')])[1] → the first input whose id starts with u_
+    //input[ends-with(@id, 'P7')] → selects id that ends with p7
+    //h2[@id='page-ent' or @class='nav-flex'] → one or the other statement
+    //h2[@id='page-ent' and @class='nav-flex'] → both statements
+    //*[.= 'Sign in'] → any tag & attribute just give me the text
+    //*[(text() = 'Welcome')] → selects only text
+    //*[contains(text(), 'Welcome to')] → selects only text that contains
+    → Use index when there are multiple matches
+    CSS Selector:
+    .classValue → By.cssSelector(".form-control")
+    #idValue → By.cssSelector("#ageCont")
+
+Testng
+    @Test the main part of the automation script where 
+    we write the business logic we want to automate
+    @BeforeSuite runs before executing all test methods in the suite
+    @BeforeTest executes before executing all test methods of
+    available classes belonging to that folder
+    @BeforeClass executes before the first method of the current class 
+    is invoked
+    @BeforeMethod executes before each test method runs
+    @AfterSuite executes after executing all test methods in the suite 
+    @AfterMethod executes after executing each test method
+    @AfterTest executes after executing all test methods of available 
+    classes belonging to that folder
+    @AfterClass executes after executing all test methods of the 
+    current class
+Java Faker
+    Copy Faker dependency into pom.xml file
+    1. Create a Faker object
+    Faker faker = new Faker();
+    2. generate fake data
+    driver
+    .findElement(By.name("firstname"))
+    .sendKeys(faker.name().firstName());
+    OR
+    String fName = faker.name().firstName();
+    fake data = mock data →fake ssn, fake name, fake address

@@ -8,3 +8,6 @@ venv/
 # Python cache files
 __pycache__/
 *.pyc
+
+# temporary files
+temp/

@@ -1,10 +1,30 @@
-coding-practice-hub/
-├── mkdocs.yml             # Configuration file for MkDocs
-└── docs/                  # All markdown content for your site
-    ├── index.md           # Homepage content
-    ├── dsa/                   # Directory for Data Structures and Algorithms content
-    │   └── intro.md       # Introduction to DSA
-    ├── sdet/                  # Directory for SDET content
-    │   └── intro.md       # Introduction to SDET
-    └── system-design/         # Directory for System Design content
-        └── intro.md       # Introduction to System Design
+. sdet-interview-prep
+└── interview-preparation
+    ├── mkdocs.yml
+    ├── projectStructure.txt
+    ├── README.md
+    └── docs/
+        ├── javascripts/
+        │   └── extra.js
+        ├── stylesheets/
+        │   └── extra.css
+        ├── cheat-sheets/
+        │   ├── StandardTemplate.md
+        │   ├── testing/
+        │   │   ├── manual/
+        │   │   └── automation/
+        │   ├── os/
+        │   ├── ci-cd/
+        │   └── misc/
+        ├── interview-questions/
+        │   └── testing/
+        │       ├── manual/
+        │       ├── automation/
+        │       ├── os/
+        │       ├── ci-cd/
+        │       └── misc/
+        └── practice-programs-hub
+            ├── StandardFormat.md
+            ├── strings/
+            ├── dsa/
+            └── numbers/

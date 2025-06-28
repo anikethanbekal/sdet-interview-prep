@@ -34,12 +34,21 @@ theme:
     - header.autohide # Hides the header on scroll down, shows on scroll up
 
 # Repository information (highly recommended for open-source projects)
-repo_name: anikethanbekal/interview-cheatsheet # Update with your GitHub username/repo
-repo_url: https://anikethanbekal.github.io/interview-cheatsheet # Update with your full GitHub repo URL
+repo_name: anikethanbekal/sdet-interview-prep # Update with your GitHub username/repo
+repo_url: https://anikethanbekal.github.io/sdet-interview-prep # Update with your full GitHub repo URL
 
 # Navigation structure - keep it clean and logical
 nav:
   - Home: index.md
+  - Cheat-Sheets:
+    - Testing:
+      - Automation:
+        - Selenium:
+          - Selenium: cheat-sheets/testing/automation/selenium.md
+          - Selenium-files: cheat-sheets/testing/automation/selenium-files.md
+          - Selenium-JSExecutor: cheat-sheets/testing/automation/selenium-jsExecutor.md
+          - Selenium-Difference: cheat-sheets/testing/automation/selenium-difference.md
+    - StandardTemplate: cheat-sheets/StandardTemplate.md
   - DSA:
       - Introduction: dsa/intro.md
       - Data Structures: dsa/data_structures.md # Example: Add more content files
