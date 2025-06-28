@@ -310,14 +310,17 @@ wait.until(ExpectedConditions.alertIsPresent());
 ```
 ### Selenium Grids
 Start the hub
-```java
+
+```shell script
 java -jar selenium-server-standalone-x.y.z.jar -role hub
 ```
+
 Start a node
-```java
+```shell script
 java -jar selenium-server-standalone-x.y.z.jar -role node -hub
 ```
+
 Server
-```java
+```text
 http://localhost:4444/ui/index.html
 ```
