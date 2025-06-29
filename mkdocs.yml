@@ -1,19 +1,6 @@
 site_name: SDET Interview Preparation Notes
 site_url: https://anikethanbekal.github.io/sdet-interview-prep
 site_description: A comprehensive guide for SDET interviews, covering DSA, SDET CheatSheets.
-site_keywords:
-  - SDET
-  - Software Development Engineer in Test
-  - Interview Preparation
-  - DSA
-  - Data Structures and Algorithms
-  - System Design
-  - Automation Testing
-  - Selenium
-  - Testing Fundamentals
-  - Software Testing
-  - Cheat Sheets
-  - Quality Assurance
 site_author: Anikethan Bekal
 
 # Theme configuration with advanced features
@@ -33,7 +20,6 @@ theme:
     repo: fontawesome/brands/github # If you host on GitHub, this will add a GitHub icon to your repo link
   features:
     - navigation.sections # Groups top-level nav items for better organization
-    - navigation.expand # Expands all navigation sections by default
     - navigation.indexes # Allows 'index.md' files to represent a section in nav
     - navigation.path # Shows the current page's path in the header
     - navigation.top # Adds a scroll-to-top button
