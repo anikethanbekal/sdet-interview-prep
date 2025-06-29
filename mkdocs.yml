@@ -1,6 +1,7 @@
-site_name: Unified Coding Hub
-site_description: All-in-one DSA, SDET, and System Design Notes
-site_author: Your Name # Remember to update this to your actual name!
+site_name: SDET Interview Preparation Notes
+site_url: https://anikethanbekal.github.io/sdet-interview-prep
+site_description: A comprehensive guide for SDET interviews, covering DSA, SDET CheatSheets.
+site_author: Anikethan Bekal
 
 # Theme configuration with advanced features
 theme:
@@ -19,7 +20,6 @@ theme:
     repo: fontawesome/brands/github # If you host on GitHub, this will add a GitHub icon to your repo link
   features:
     - navigation.sections # Groups top-level nav items for better organization
-    - navigation.expand # Expands all navigation sections by default
     - navigation.indexes # Allows 'index.md' files to represent a section in nav
     - navigation.path # Shows the current page's path in the header
     - navigation.top # Adds a scroll-to-top button
@@ -48,23 +48,14 @@ nav:
           - Selenium-files: cheat-sheets/testing/automation/selenium-files.md
           - Selenium-JSExecutor: cheat-sheets/testing/automation/selenium-jsExecutor.md
           - Selenium-Difference: cheat-sheets/testing/automation/selenium-difference.md
-    - StandardTemplate: cheat-sheets/StandardTemplate.md
-  - DSA:
-      - Introduction: dsa/intro.md
-      - Data Structures: dsa/data_structures.md # Example: Add more content files
-      - Algorithms: dsa/algorithms.md # Example: Add more content files
-  - SDET:
-      - Introduction: sdet/intro.md
-      - Testing Fundamentals: sdet/testing_fundamentals.md # Example: Add more content files
-      - Automation: sdet/automation.md # Example: Add more content files
-      - Tools and Technologies: sdet/tools.md # Example: Add more content files
-  - System Design:
-      - Basics: system-design/intro.md
-      - Scalability: system-design/scalability.md # Example: Add more content files
-      - Reliability: system-design/reliability.md # Example: Add more content files
-  - Testing:
-      - Selenium: testing/selenium.md
-      - Test: testing/Test.md
+      - Manual Testing Overview: cheat-sheets/testing/manual/basics-manual-testing.md
+  - Essentials Guide:
+    - Testing Concepts:
+      - Manual Testing Basics: tech-essentials-guide/testing-concepts/manual-testing-basics.md
+  - Practice Programs:
+    - Stings:
+      - Character Count: practice-programs-hub/strings/CharacterCount.md
+      - Count Uppercase Character: practice-programs-hub/strings/CountUppecaseCharacter.md
 
 # Markdown extensions - expanded for richer content
 markdown_extensions:
