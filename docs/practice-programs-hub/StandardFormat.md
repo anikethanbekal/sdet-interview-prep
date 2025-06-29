@@ -12,7 +12,7 @@ categories:
 difficulty: easy
 background: bg-[#d1fae5]
 badge_color: text-green-800 bg-green-100
-topic: string manipulation
+topic: string-manipulation
 date: 2025-06-28
 author: yourname
 intro: |
@@ -71,9 +71,10 @@ public class ReverseString {
 
 ---
 
-## 🐍 Python Solution
+## 🔵🟡 Python Solution
 
 ```python
+
 def reverse(s):
     return s[::-1]
 
@@ -122,12 +123,3 @@ print(reverse("hello"))  # Output: olleh
 `string`, `python`, `java`, `reversal`, `easy`, `interview`, `syntax`, `language-syntax`
 
 ---
-
-## ✅ Benefits of This Format
-
-| Section     | Benefit                                  |
-|-------------|------------------------------------------|
-| Dual Code   | Easier comparison across languages       |
-| Explanation | Clear understanding of logic & choices   |
-| Metadata    | Ready for use in MkDocs or Docusaurus    |
-| Tips        | Prepares for real-world interviews       |

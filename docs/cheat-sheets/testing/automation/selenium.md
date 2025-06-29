@@ -11,9 +11,9 @@ intro: |
   This cheat sheet is a crash course for Selenium beginners and help to get the idea about the basic concepts of Selenium.
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Initialize Browser Drivers {.row-span-2}
+### 🌐 Initialize Browser Drivers {.row-span-2}
 
 | Browser   | Syntax                                  |
 | --------- | --------------------------------------- |
@@ -24,7 +24,7 @@ intro: |
 
 {.show-header .left-text}
 
-### Selenium find elements {.col-span-2}
+### 🔍 Selenium find elements {.col-span-2}
 
 ```java
 //To fetch one element
@@ -34,7 +34,7 @@ driver.findElement(By.name (“key”));
 driver.findElements(By.name (“key”));
 ```
 
-### Selenium Locators {.col-span-2}
+### 🧭 Selenium Locators {.col-span-2}
 
 | Locator           | Syntax                                        |
 | ----------------- | --------------------------------------------- |
@@ -42,15 +42,15 @@ driver.findElements(By.name (“key”));
 | `cssSelector`     | driver.findElement(By.cssSelector(key"))      |
 | `id `             | driver.findElement(By.id(key"))               |
 | `linkText`        | driver.findElement(By.linkText(key"))         |
-| `name`            | driver.findElement(By.name(“key"))            |
-| `partialLinkText` | driver.findElement(By.partialLinkText(“key")) |
+| `name`            | driver.findElement(By.name(“key”))            |
+| `partialLinkText` | driver.findElement(By.partialLinkText(“key”)) |
 | `tagName `        | driver.findElement(By.tagName (“key”))        |
-| `xpath`           | driver.findElement(By.xpath(“key"))           |
+| `xpath`           | driver.findElement(By.xpath(“key”))           |
 
 {.show-header .left-text}
 
-### Operations
-#### Navigate to URL
+### ⚙️ Operations
+#### 🌐 Navigate to URL
 
 ```java
 driver.get("https://www.example.com");
@@ -58,9 +58,9 @@ driver.get("https://www.example.com");
 driver.navigate().to("https://www.newsite.com");
 ```
 
-### Basic Selenium Actions {.col-span-2}
+### 🖱️ Basic Selenium Actions {.col-span-2}
 
-#### Element Level {.col-span-2}
+#### 🧩 Element Level {.col-span-2}
 
 ```java
 WebElement element = driver.findElement(By.id("abc"));
@@ -75,7 +75,7 @@ WebElement element = driver.findElement(By.id("abc"));
 
 {.show-header .left-text}
 
-##### Get keywords {.col-span-2}
+##### 🔑 Get keywords {.col-span-2}
 
 | Description                            | Syntax                | ReturnType |
 |-----------------------------------|-----------------------|------------|
@@ -85,8 +85,8 @@ WebElement element = driver.findElement(By.id("abc"));
 
 {.show-header .left-text}
 
-##### Validation {.col-span-2}
- | Description                 | Syntax                 | ReturnType |
+##### ✅ Validation {.col-span-2}
+ | Description            | Syntax                 | ReturnType |
  |------------------------|------------------------|------------|
  | ` Element Displayed ?` | element.isDisplayed(); | boolean    |
  | `Element Enabled ?`    | element.isEnabled();   | boolean    |
@@ -94,7 +94,7 @@ WebElement element = driver.findElement(By.id("abc"));
 
 {.show-header .left-text}
 
-### Navigation {.col-span-2}
+### 🔄 Navigation {.col-span-2}
 
 | Description                     | Syntax                                           |
 |---------------------------------|--------------------------------------------------|
@@ -105,8 +105,7 @@ WebElement element = driver.findElement(By.id("abc"));
 
 {.show-header .left-text}
 
-
-### Drop Down Handling
+### ⬇️ Drop Down Handling
 
 ```java
 WebElement day=driver.findElement(By.id("days"));
@@ -134,8 +133,7 @@ List<WebElement> opts = selectDay.getOptions();
 selectDay.deselectAll();
 ```
 
-
-### iFrame Handling {.col-span-2}
+### 🖼️ iFrame Handling {.col-span-2}
 
 | Description                               | Syntax                                                                                                         |
 |-------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -148,9 +146,9 @@ selectDay.deselectAll();
 
 {.show-header .left-text}
 
-### Window Handling
+### 🪟 Window Handling
 
-#### Basic Window Operations {.col-span-2}
+#### 🖥️ Basic Window Operations {.col-span-2}
 | Description                        | Syntax                                                 |
 |------------------------------------|--------------------------------------------------------|
 | `Set window position`              | driver.manage().window().setPosition(new Point(0, 0)); |
@@ -162,7 +160,7 @@ selectDay.deselectAll();
 
 {.show-header .left-text}
 
-#### Advanced operations on windows
+#### 🔄 Advanced operations on windows
 
 ```java
 // Get the current window handle
@@ -175,7 +173,7 @@ Set<String> allWindowHandles = driver.getWindowHandles();
 for (String eachHandle : allWindowHandles){
   if (!eachHandle.equals(window1Handle)){
     driver.switchTo().window(eachHandle);
-	}
+  }
 }
 
 or 
@@ -189,7 +187,7 @@ driver.switchTo().newWindow(WindowType.WINDOW);
 
 ```
 
-### Take screenshot
+### 📸 Take screenshot
 ```java
 
 import org.apache.commons.io.FileUtils;
@@ -198,7 +196,7 @@ FileUtils.copyFile(scrFile, new File("./image.png"));
 
 ```
 
-### Alerts/Pop-Ups
+### ⚠️ Alerts/Pop-Ups
 
 ```java
 Alert alert = driver.switchTo().alert();
@@ -217,7 +215,7 @@ alert().getText();
 
 ```
 
-### Mouse and Keyboard Actions {.col-span-2}
+### 🖱️ Mouse and Keyboard Actions {.col-span-2}
 
 ```java
 Actions actions = new Actions(driver);
@@ -248,7 +246,7 @@ build() is optional whereas perform() is mandatory.
 '''
 ```
 
-### Page Information {.col-span-1}
+### 📄 Page Information {.col-span-1}
 
 ```java
 // Get the page title
@@ -262,7 +260,7 @@ driver.getPageSource();
 
 ```
 
-### Waits {.col-span-3}
+### ⏳ Waits {.col-span-3}
 <p>There are 4 types of waits that can be used in a script</p>
 
 - Thread.Sleep
@@ -270,7 +268,7 @@ driver.getPageSource();
 - Explicit Wait
 - Fluent Wait
 
-#### Thread - from java
+#### 🕒 Thread - from java
 <p>This is from java, it is a hard wait i.e; stops execution till time provided in milliseconds.</p>
 
 ```java
@@ -278,14 +276,14 @@ driver.getPageSource();
 Thread.sleep(2000);
 ```
 
-#### Implicit Wait
+#### ⏱️ Implicit Wait
 <p>Once the command is run, Implicit Wait remains for the entire duration for which the browser is open.</p>
 
 ```java
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 ```
 
-#### Explicit Wait
+#### 🕵️ Explicit Wait
 <p>These are conditional waits can be applied to satisfy a particular condition</p>
 
 ```java
@@ -294,7 +292,7 @@ WebDriverWait wait = new WebDriverWait(driver, 10);
 wait.until(ExpectedConditions.elementToBeClickable(element));
 ```
 
-#### Fluent Wait
+#### 🔄 Fluent Wait
 <p>Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible.</p> <p>It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.</p>
 
 ```java
@@ -308,7 +306,7 @@ wait.ignoring(NoSuchElementException.class)
 //This is how we specify the condition to wait on.
 wait.until(ExpectedConditions.alertIsPresent());
 ```
-### Selenium Grids
+### 🖥️ Selenium Grids
 Start the hub
 
 ```shell script
