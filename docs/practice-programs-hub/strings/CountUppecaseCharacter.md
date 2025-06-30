@@ -29,7 +29,7 @@ Write a function that takes a string as input and returns the number of uppercas
 
 ---
 
-## ✅ Requirements (if any)
+## ✅ Requirements
 
 - **Input**: 
   - A non-empty string `str` (e.g., `"Hello World"`)

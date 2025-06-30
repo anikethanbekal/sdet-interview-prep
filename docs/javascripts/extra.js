@@ -29,25 +29,102 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Example: Basic Dark Mode Toggle (requires custom header override in MkDocs)
-    // For a more robust solution, refer to Material for MkDocs documentation
-    // This assumes you add a custom button in a header partial override.
-    // E.g., <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    // Enhanced Dark Mode Toggle with SVG icons
     const darkModeToggle = document.getElementById('dark-mode-toggle');
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            // You might want to save the preference in localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-
-        // Apply theme from localStorage on load
-        if (localStorage.getItem('theme') === 'dark') {
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    function setDarkMode(isDark) {
+        if (isDark) {
             document.body.classList.add('dark-mode');
+            if (iconSun) iconSun.style.display = 'block';
+            if (iconMoon) iconMoon.style.display = 'none';
+        } else {
+            document.body.classList.remove('dark-mode');
+            if (iconSun) iconSun.style.display = 'none';
+            if (iconMoon) iconMoon.style.display = 'block';
         }
     }
+    // On load, set theme from localStorage
+    const theme = localStorage.getItem('theme');
+    setDarkMode(theme === 'dark');
+
+    // Add animation to the toggle button
+    function animateToggle() {
+        if (darkModeToggle) {
+            darkModeToggle.style.transform = 'rotate(180deg) scale(1.2)';
+            darkModeToggle.style.transition = 'transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)';
+            setTimeout(() => {
+                darkModeToggle.style.transform = '';
+            }, 500);
+        }
+    }
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            animateToggle();
+        });
+    }
+
+    // --- RIPPLE EFFECT FOR BUTTONS ---
+    function createRipple(event) {
+        const button = event.currentTarget;
+        const circle = document.createElement('span');
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        circle.classList.add('ripple');
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
+        circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
+        button.appendChild(circle);
+        circle.addEventListener('animationend', () => circle.remove());
+    }
+    document.querySelectorAll('.custom-button, #dark-mode-toggle').forEach(btn => {
+        btn.addEventListener('click', createRipple);
+    });
+
+    // --- FADE-IN ANIMATION ON LOAD ---
+    function fadeInOnLoad() {
+        const main = document.querySelector('.md-content, .md-main__inner');
+        const sidebar = document.querySelector('.md-sidebar__inner');
+        if (main) main.classList.add('fade-in-up');
+        if (sidebar) sidebar.classList.add('fade-in-up');
+    }
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.addEventListener('DOMContentLoaded', fadeInOnLoad);
+    }
+
+    // --- SCROLL TO TOP BUTTON ---
+    let scrollBtn = document.getElementById('scroll-to-top');
+    if (!scrollBtn) {
+        scrollBtn = document.createElement('button');
+        scrollBtn.id = 'scroll-to-top';
+        scrollBtn.innerHTML = '↑';
+        document.body.appendChild(scrollBtn);
+    }
+    function toggleScrollBtn() {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    }
+    window.addEventListener('scroll', toggleScrollBtn);
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // --- ANIMATE ACTIVE SIDEBAR LINK ---
+    function animateActiveNav() {
+        document.querySelectorAll('.md-nav__link').forEach(link => {
+            if (link.classList.contains('active') || link.classList.contains('md-nav__link--active')) {
+                link.classList.add('active-nav-animate');
+            } else {
+                link.classList.remove('active-nav-animate');
+            }
+        });
+    }
+    window.addEventListener('DOMContentLoaded', animateActiveNav);
+    window.addEventListener('hashchange', animateActiveNav);
 });
