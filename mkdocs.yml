@@ -59,6 +59,10 @@ nav:
     - Stings:
       - Character Count: practice-programs-hub/strings/CharacterCount.md
       - Count Uppercase Character: practice-programs-hub/strings/CountUppecaseCharacter.md
+      - Count Character Occurrences: practice-programs-hub/strings/CountOccurrenceCharcter.md
+      - Count Vowels: practice-programs-hub/strings/CountVowelUsingGoogleGuava.md
+      - Duplicate Characters:  practice-programs-hub/strings/DuplicateCharacters.md
+
 
 # Markdown extensions - expanded for richer content
 markdown_extensions:
