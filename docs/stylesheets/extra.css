@@ -65,3 +65,131 @@ body {
         display: none; /* Hide topic title on small screens */
     }
 }
+
+/* --- DARK MODE STYLES --- */
+body.dark-mode {
+    background-color: #181a1b;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #fff;
+}
+
+body.dark-mode a {
+    color: #8ab4f8;
+    text-decoration: underline;
+}
+body.dark-mode a:hover {
+    color: #e8eaed;
+    background-color: #23272b;
+}
+
+body.dark-mode .md-typeset pre > code {
+    background: #23272b;
+    color: #e0e0e0;
+}
+
+body.dark-mode .md-typeset .admonition {
+    background-color: #23272b;
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+body.dark-mode .md-typeset .admonition.note {
+    background-color: #1e293b;
+    border-left: 5px solid #90caf9;
+}
+body.dark-mode .md-typeset .admonition.tip {
+    background-color: #1b2e1b;
+    border-left: 5px solid #81c784;
+}
+
+body.dark-mode .custom-button {
+    background-color: #3949ab;
+    color: #fff;
+}
+body.dark-mode .custom-button:hover {
+    background-color: #283593;
+    color: #fff;
+}
+
+body.dark-mode table {
+    background: #23272b;
+    color: #e0e0e0;
+}
+body.dark-mode th, body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode code, body.dark-mode kbd, body.dark-mode samp {
+    background: #23272b;
+    color: #e0e0e0;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background: none;
+    color: #fff;
+}
+body.dark-mode #dark-mode-toggle:hover {
+    background: #23272b;
+    color: #ffd600;
+}
+
+/* Ensure all hover states are accessible in dark mode */
+body.dark-mode a, body.dark-mode .custom-button, body.dark-mode #dark-mode-toggle {
+    transition: background 0.2s, color 0.2s;
+}
+
+/* --- SIDEBAR & NAVIGATION STYLES --- */
+/* These selectors target common MkDocs Material sidebar/nav classes. Adjust as needed for your theme. */
+.md-sidebar, .md-sidebar__scrollwrap, .md-sidebar__inner {
+    background: #f8f9fa;
+}
+.md-nav__title, .md-nav__item--section > .md-nav__link {
+    font-weight: bold;
+    color: #333;
+    background: #e3e6ea;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    margin: 0.5em 0 0.2em 0;
+    letter-spacing: 0.03em;
+    font-size: 1.08em;
+}
+.md-nav__link {
+    color: #444;
+    border-radius: 4px;
+    padding: 0.4em 1em;
+    transition: background 0.2s, color 0.2s;
+}
+.md-nav__link:hover, .md-nav__link:focus {
+    background: #e0e7ef;
+    color: #222;
+}
+
+body.dark-mode .md-sidebar, body.dark-mode .md-sidebar__scrollwrap, body.dark-mode .md-sidebar__inner {
+    background: #181a1b;
+}
+body.dark-mode .md-nav__title, body.dark-mode .md-nav__item--section > .md-nav__link {
+    color: #fff;
+    background: #23272b;
+    border-radius: 6px;
+}
+body.dark-mode .md-nav__link {
+    color: #b0b8c1;
+    background: none;
+}
+body.dark-mode .md-nav__link:hover, body.dark-mode .md-nav__link:focus {
+    background: #23272b;
+    color: #fff;
+}
+
+/* Ensure nav section headers are always visible */
+.md-nav__title, .md-nav__item--section > .md-nav__link {
+    z-index: 2;
+    position: relative;
+}

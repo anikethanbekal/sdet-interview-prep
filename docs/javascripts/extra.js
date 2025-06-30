@@ -29,25 +29,41 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Example: Basic Dark Mode Toggle (requires custom header override in MkDocs)
-    // For a more robust solution, refer to Material for MkDocs documentation
-    // This assumes you add a custom button in a header partial override.
-    // E.g., <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    // Enhanced Dark Mode Toggle with SVG icons
     const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    function setDarkMode(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+            if (iconSun) iconSun.style.display = 'block';
+            if (iconMoon) iconMoon.style.display = 'none';
+        } else {
+            document.body.classList.remove('dark-mode');
+            if (iconSun) iconSun.style.display = 'none';
+            if (iconMoon) iconMoon.style.display = 'block';
+        }
+    }
+    // On load, set theme from localStorage
+    const theme = localStorage.getItem('theme');
+    setDarkMode(theme === 'dark');
+
+    // Add animation to the toggle button
+    function animateToggle() {
+        if (darkModeToggle) {
+            darkModeToggle.style.transform = 'rotate(180deg) scale(1.2)';
+            darkModeToggle.style.transition = 'transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)';
+            setTimeout(() => {
+                darkModeToggle.style.transform = '';
+            }, 500);
+        }
+    }
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            // You might want to save the preference in localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            animateToggle();
         });
-
-        // Apply theme from localStorage on load
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
     }
 });

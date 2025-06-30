@@ -6,6 +6,7 @@ site_author: Anikethan Bekal
 # Theme configuration with advanced features
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     # Scheme can be 'default' or 'slate' (for dark mode)
     # We'll set up a toggle later for better control
