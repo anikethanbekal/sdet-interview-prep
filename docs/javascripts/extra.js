@@ -66,4 +66,65 @@ document.addEventListener('DOMContentLoaded', () => {
             animateToggle();
         });
     }
+
+    // --- RIPPLE EFFECT FOR BUTTONS ---
+    function createRipple(event) {
+        const button = event.currentTarget;
+        const circle = document.createElement('span');
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        circle.classList.add('ripple');
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
+        circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
+        button.appendChild(circle);
+        circle.addEventListener('animationend', () => circle.remove());
+    }
+    document.querySelectorAll('.custom-button, #dark-mode-toggle').forEach(btn => {
+        btn.addEventListener('click', createRipple);
+    });
+
+    // --- FADE-IN ANIMATION ON LOAD ---
+    function fadeInOnLoad() {
+        const main = document.querySelector('.md-content, .md-main__inner');
+        const sidebar = document.querySelector('.md-sidebar__inner');
+        if (main) main.classList.add('fade-in-up');
+        if (sidebar) sidebar.classList.add('fade-in-up');
+    }
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.addEventListener('DOMContentLoaded', fadeInOnLoad);
+    }
+
+    // --- SCROLL TO TOP BUTTON ---
+    let scrollBtn = document.getElementById('scroll-to-top');
+    if (!scrollBtn) {
+        scrollBtn = document.createElement('button');
+        scrollBtn.id = 'scroll-to-top';
+        scrollBtn.innerHTML = '↑';
+        document.body.appendChild(scrollBtn);
+    }
+    function toggleScrollBtn() {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    }
+    window.addEventListener('scroll', toggleScrollBtn);
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // --- ANIMATE ACTIVE SIDEBAR LINK ---
+    function animateActiveNav() {
+        document.querySelectorAll('.md-nav__link').forEach(link => {
+            if (link.classList.contains('active') || link.classList.contains('md-nav__link--active')) {
+                link.classList.add('active-nav-animate');
+            } else {
+                link.classList.remove('active-nav-animate');
+            }
+        });
+    }
+    window.addEventListener('DOMContentLoaded', animateActiveNav);
+    window.addEventListener('hashchange', animateActiveNav);
 });

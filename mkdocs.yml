@@ -32,11 +32,13 @@ theme:
     - content.tabs.link # Makes tabs in markdown linkable
     - content.footnote.tooltips # Footnotes appear as tooltips on hover
     - toc.integrate # Integrates table of contents into the navigation pane
+    - toc.sticky # Sticky Table of Contents
     - header.autohide # Hides the header on scroll down, shows on scroll up
 
 # Repository information (highly recommended for open-source projects)
 repo_name: anikethanbekal/sdet-interview-prep # Update with your GitHub username/repo
-repo_url: https://anikethanbekal.github.io/sdet-interview-prep # Update with your full GitHub repo URL
+repo_url: https://github.com/anikethanbekal/sdet-interview-prep # Update with your full GitHub repo URL
+edit_uri: edit/feature/docs/
 
 # Navigation structure - keep it clean and logical
 nav:
@@ -62,8 +64,7 @@ nav:
 markdown_extensions:
   - pymdownx.highlight: # Enhanced code highlighting
       anchor_linenums: true
-
-  # This means Mermaid/PlantUML diagrams and some code block enhancements will not work.
+      linenums: true
   - pymdownx.arithmatex: # For LaTeX/math equations
       generic: true
   - pymdownx.details # Collapsible sections
@@ -74,7 +75,11 @@ markdown_extensions:
   - pymdownx.emoji: # For emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: "mermaid"
+          class: "mermaid"
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition # Callouts (Notes, Warnings, Tips)
   - footnotes # Standard footnotes
   - toc: # Table of contents
