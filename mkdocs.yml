@@ -95,6 +95,6 @@ markdown_extensions:
 
 # Customization - where you link your CSS and JavaScript
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/toggle-only.css
 extra_javascript:
   - javascripts/extra.js

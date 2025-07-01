@@ -29,44 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Enhanced Dark Mode Toggle with SVG icons
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const iconSun = document.getElementById('icon-sun');
-    const iconMoon = document.getElementById('icon-moon');
-    function setDarkMode(isDark) {
-        if (isDark) {
-            document.body.classList.add('dark-mode');
-            if (iconSun) iconSun.style.display = 'block';
-            if (iconMoon) iconMoon.style.display = 'none';
-        } else {
-            document.body.classList.remove('dark-mode');
-            if (iconSun) iconSun.style.display = 'none';
-            if (iconMoon) iconMoon.style.display = 'block';
-        }
-    }
-    // On load, set theme from localStorage
-    const theme = localStorage.getItem('theme');
-    setDarkMode(theme === 'dark');
-
-    // Add animation to the toggle button
-    function animateToggle() {
-        if (darkModeToggle) {
-            darkModeToggle.style.transform = 'rotate(180deg) scale(1.2)';
-            darkModeToggle.style.transition = 'transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)';
-            setTimeout(() => {
-                darkModeToggle.style.transform = '';
-            }, 500);
-        }
-    }
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-            const isDark = !document.body.classList.contains('dark-mode');
-            setDarkMode(isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            animateToggle();
-        });
-    }
-
     // --- RIPPLE EFFECT FOR BUTTONS ---
     function createRipple(event) {
         const button = event.currentTarget;
@@ -80,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.appendChild(circle);
         circle.addEventListener('animationend', () => circle.remove());
     }
-    document.querySelectorAll('.custom-button, #dark-mode-toggle').forEach(btn => {
+    document.querySelectorAll('.custom-button').forEach(btn => {
         btn.addEventListener('click', createRipple);
     });
 
