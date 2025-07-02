@@ -56,13 +56,148 @@ nav:
     - Testing Concepts:
       - Manual Testing Basics: tech-essentials-guide/testing-concepts/manual-testing-basics.md
   - Practice Programs:
-    - Stings:
+    - Strings:
       - Character Count: practice-programs-hub/strings/CharacterCount.md
-      - Count Uppercase Character: practice-programs-hub/strings/CountUppecaseCharacter.md
+      - Count Uppercase Characters: practice-programs-hub/strings/CountUppecaseCharacter.md
       - Count Character Occurrences: practice-programs-hub/strings/CountOccurrenceCharcter.md
-      - Count Vowels: practice-programs-hub/strings/CountVowelUsingGoogleGuava.md
-      - Duplicate Characters:  practice-programs-hub/strings/DuplicateCharacters.md
-
+      - Count Vowels (Guava): practice-programs-hub/strings/CountVowelUsingGoogleGuava.md
+      - Duplicate Characters: practice-programs-hub/strings/DuplicateCharacters.md
+      - Anagram Check: practice-programs-hub/strings/AnagramCheck.md
+      - Remove Leading Zeros: practice-programs-hub/strings/RemoveLeadingZeros.md
+      - Replace Character: practice-programs-hub/strings/ReplaceChar.md
+      - Swap Pairs: practice-programs-hub/strings/SwapPairs.md
+      - Reverse String (No Built-ins): practice-programs-hub/strings/Core_String_Manipulation__reverse_a_string_without_using_built-in_functions.md
+      - Replace Spaces with %20: practice-programs-hub/strings/Core_String_Manipulation__replace_all_spaces_with_%20.md
+      - Remove Duplicate Characters: practice-programs-hub/strings/Core_String_Manipulation__remove_duplicate_characters_from_a_string.md
+      - Remove All Occurrences of Char: practice-programs-hub/strings/Core_String_Manipulation__remove_all_occurrences_of_a_given_character.md
+      - First Non-Repeating Character: practice-programs-hub/strings/Core_String_Manipulation__find_the_first_non-repeating_character.md
+      - Count Vowels & Consonants: practice-programs-hub/strings/Core_String_Manipulation__count_vowels_and_consonants_in_a_string.md
+      - Convert to Title Case: practice-programs-hub/strings/Core_String_Manipulation__convert_a_string_to_title_case.md
+      - Check Anagrams: practice-programs-hub/strings/Core_String_Manipulation__check_if_two_strings_are_anagrams.md
+      - Check Palindrome: practice-programs-hub/strings/Core_String_Manipulation__check_if_a_string_is_a_palindrome.md
+      - Only Digits Check: practice-programs-hub/strings/Core_String_Manipulation__check_if_a_string_contains_only_digits.md
+      - Longest Palindromic Substring: practice-programs-hub/strings/String_Algorithms__longest_palindromic_substring.md
+      - String Compression: practice-programs-hub/strings/String_Algorithms__implement_basic_string_compression.md
+      - Run-Length Encoding: practice-programs-hub/strings/String_Algorithms__run-length_encoding_of_a_string.md
+      - Encode/Decode (URL Shortener): practice-programs-hub/strings/String_Algorithms__encode_and_decode_strings_like_in_url_shorteners.md
+      - All String Permutations: practice-programs-hub/strings/String_Algorithms__find_all_permutations_of_a_string.md
+      - strstr (First Substring Index): practice-programs-hub/strings/String_Algorithms__implement_strstr_-_find_the_index_of_the_first_occurrence_of_substring.md
+      - Longest Common Prefix: practice-programs-hub/strings/String_Algorithms__find_the_longest_common_prefix_among_a_set_of_strings.md
+      - Group Anagrams: practice-programs-hub/strings/String_Algorithms__count_and_group_anagrams_in_a_list_of_strings.md
+      - One Edit Away: practice-programs-hub/strings/String_Algorithms__check_if_two_strings_are_one_edit_away.md
+      - Longest Substring w/o Repeat: practice-programs-hub/strings/String_Algorithms__find_the_longest_substring_without_repeating_characters.md
+      - Validate URLs & Redirects: practice-programs-hub/strings/SDET_Use_Cases__validate_urls_and_redirect_strings_in_automation_tests.md
+      - Validate API Response Fields: practice-programs-hub/strings/SDET_Use_Cases__validate_api_response_fields_using_string_assertions.md
+      - Sanitize Input (Prevent XSS): practice-programs-hub/strings/SDET_Use_Cases__sanitize_input_strings_to_prevent_xss_attacks.md
+      - Parse Log & Extract Errors: practice-programs-hub/strings/SDET_Use_Cases__parse_a_log_file_and_extract_error_messages.md
+      - Generate Dynamic Test Data: practice-programs-hub/strings/SDET_Use_Cases__generate_dynamic_test_data_using_string_patterns.md
+      - Extract Auth Tokens: practice-programs-hub/strings/SDET_Use_Cases__extract_tokens_from_authorization_headers.md
+      - Dynamic Selectors (Selenium): practice-programs-hub/strings/SDET_Use_Cases__create_dynamic_selectors_using_string_concatenation_in_selenium.md
+      - Compare Large JSON Strings: practice-programs-hub/strings/SDET_Use_Cases__compare_two_large_json_strings_as_string_comparison.md
+      - Case Sensitivity in Input: practice-programs-hub/strings/SDET_Use_Cases__check_case_sensitivity_issues_in_user_input_validations.md
+      - Automate Test Case Naming: practice-programs-hub/strings/SDET_Use_Cases__automate_test_case_naming_conventions_from_string_inputs.md
+      - Count Words (Multilingual): practice-programs-hub/strings/Internationalization_Edge_Cases__count_words_in_a_multilingual_string.md
+      - Check Emoji Presence: practice-programs-hub/strings/Internationalization_Edge_Cases__check_for_emoji_presence_in_a_string.md
+      - Remove Diacritics/Accents: practice-programs-hub/strings/Internationalization_Edge_Cases__remove_diacritics_accents_from_letters.md
+      - Normalize Unicode Strings: practice-programs-hub/strings/Internationalization_Edge_Cases__normalize_unicode_strings_eg_café_vs_café.md
+      - Handle RTL Languages: practice-programs-hub/strings/Internationalization_Edge_Cases__handle_and_validate_right-to-left_languages_like_arabic.md
+      - Custom String Formatter: practice-programs-hub/strings/Advanced_System_Tasks__write_a_custom_string_formatter_like_pythons_format_or_javas_messageformat.md
+      - KMP String Search: practice-programs-hub/strings/Advanced_System_Tasks__simulate_string_search_using_kmp_algorithm.md
+      - Simple Diff Checker: practice-programs-hub/strings/Advanced_System_Tasks__implement_a_simple_diff_checker_between_two_strings.md
+      - Basic String Tokenizer: practice-programs-hub/strings/Advanced_System_Tasks__implement_a_basic_string_tokenizer_like_split.md
+      - Case/Diacritic-Insensitive Search: practice-programs-hub/strings/Advanced_System_Tasks__build_a_string_search_with_case-insensitive_and_diacritic-insensitive_support.md
+      - Validate IP Address: practice-programs-hub/strings/Regex_Pattern_Matching__validate_ipv4_ipv6_address.md
+      - Validate Email Address: practice-programs-hub/strings/Regex_Pattern_Matching__validate_email_address_using_regex.md
+      - Validate Strong Password: practice-programs-hub/strings/Regex_Pattern_Matching__validate_a_strong_password_at_least_1_digit_1_uppercase_1_special_char.md
+      - Validate Phone Number: practice-programs-hub/strings/Regex_Pattern_Matching__validate_a_phone_number_format_eg_123_456-7890.md
+      - Remove HTML Tags: practice-programs-hub/strings/Regex_Pattern_Matching__replace_all_html_tags_in_a_string.md
+      - Extract Hashtags: practice-programs-hub/strings/Regex_Pattern_Matching__match_and_extract_hashtags_from_a_tweet.md
+      - Mask Credit Card Numbers: practice-programs-hub/strings/Regex_Pattern_Matching__find_and_mask_credit_card_numbers_in_text.md
+      - Extract Domain from URL: practice-programs-hub/strings/Regex_Pattern_Matching__extract_domain_name_from_url.md
+      - Extract All Numbers: practice-programs-hub/strings/Regex_Pattern_Matching__extract_all_numbers_from_a_string.md
+      - Validate Date Format: practice-programs-hub/strings/Regex_Pattern_Matching__check_if_a_string_is_a_valid_date_eg_dd-mm-yyyy.md
+    - Numbers:
+      - Check Prime: practice-programs-hub/numbers/01-is-prime.md
+      - Factorial: practice-programs-hub/numbers/02-factorial.md
+      - Fibonacci: practice-programs-hub/numbers/03-fibonacci.md
+      - GCD: practice-programs-hub/numbers/04-gcd.md
+      - LCM: practice-programs-hub/numbers/05-lcm.md
+      - Palindrome Number: practice-programs-hub/numbers/06-palindrome-number.md
+      - Armstrong Number: practice-programs-hub/numbers/07-armstrong-number.md
+      - Reverse Number: practice-programs-hub/numbers/08-reverse-number.md
+      - Sum of Digits: practice-programs-hub/numbers/09-sum-of-digits.md
+      - Count Digits: practice-programs-hub/numbers/10-count-digits.md
+      - Sum of N Numbers: practice-programs-hub/numbers/11-sum-n-numbers.md
+      - Sum of N Even Numbers: practice-programs-hub/numbers/12-sum-n-even-numbers.md
+      - Sum of N Odd Numbers: practice-programs-hub/numbers/13-sum-n-odd-numbers.md
+      - Power of Two: practice-programs-hub/numbers/14-power-of-two.md
+      - Count Set Bits: practice-programs-hub/numbers/15-count-set-bits.md
+      - Swap Numbers: practice-programs-hub/numbers/16-swap-numbers.md
+      - Generate Primes: practice-programs-hub/numbers/17-generate-primes.md
+      - Prime Factors: practice-programs-hub/numbers/18-prime-factors.md
+      - Find Largest Number: practice-programs-hub/numbers/19-find-largest-number.md
+      - Find Smallest Number: practice-programs-hub/numbers/20-find-smallest-number.md
+      - Sum of Array: practice-programs-hub/numbers/21-sum-of-array.md
+      - Average of Array: practice-programs-hub/numbers/22-average-of-array.md
+      - Find Second Largest: practice-programs-hub/numbers/23-find-second-largest.md
+      - Find Second Smallest: practice-programs-hub/numbers/24-find-second-smallest.md
+      - Swap Two Numbers: practice-programs-hub/numbers/25-swap-two-numbers.md
+      - Reverse a Number: practice-programs-hub/numbers/26-reverse-number.md
+      - Check Armstrong Number: practice-programs-hub/numbers/27-check-armstrong-number.md
+      - Check Perfect Number: practice-programs-hub/numbers/28-check-perfect-number.md
+      - Check Abundant Number: practice-programs-hub/numbers/29-check-abundant-number.md
+      - Check Harshad Number: practice-programs-hub/numbers/30-check-harshad-number.md
+      - Check Automorphic Number: practice-programs-hub/numbers/31-check-automorphic-number.md
+      - Check Neon Number: practice-programs-hub/numbers/32-check-neon-number.md
+      - Check Spy Number: practice-programs-hub/numbers/33-check-spy-number.md
+      - Check Magic Number: practice-programs-hub/numbers/34-check-magic-number.md
+      - Check Happy Number: practice-programs-hub/numbers/35-check-happy-number.md
+      - Check Niven Number: practice-programs-hub/numbers/36-check-niven-number.md
+      - Check Pronic Number: practice-programs-hub/numbers/37-check-pronic-number.md
+      - Check Palindrome Number: practice-programs-hub/numbers/38-check-palindrome-number.md
+      - Check Cyclic Number: practice-programs-hub/numbers/39-check-cyclic-number.md
+      - Check Kaprekar Number: practice-programs-hub/numbers/40-check-kaprekar-number.md
+      - Check Evil Number: practice-programs-hub/numbers/41-check-evil-number.md
+      - Check Odious Number: practice-programs-hub/numbers/42-check-odious-number.md
+      - Check Lucky Number: practice-programs-hub/numbers/43-check-lucky-number.md
+      - Check Sphenic Number: practice-programs-hub/numbers/44-check-sphenic-number.md
+      - Check Composite Number: practice-programs-hub/numbers/45-check-composite-number.md
+      - Check Circular Prime: practice-programs-hub/numbers/46-check-circular-prime.md
+      - Check Emirp Number: practice-programs-hub/numbers/47-check-emirp-number.md
+      - Check Twisted Prime: practice-programs-hub/numbers/48-check-twisted-prime.md
+      - Check Unique Number: practice-programs-hub/numbers/49-check-unique-number.md
+      - Check Repdigit Number: practice-programs-hub/numbers/50-check-repdigit-number.md
+    - Arrays:
+      - Find Largest Element: practice-programs-hub/arrays/01-find-largest-element.md
+      - Reverse Array: practice-programs-hub/arrays/02-reverse-array.md
+      - Find Second Largest: practice-programs-hub/arrays/03-find-second-largest.md
+      - Find Missing Number: practice-programs-hub/arrays/04-find-missing-number.md
+      - Find Duplicate: practice-programs-hub/arrays/05-find-duplicate.md
+      - Rotate Array: practice-programs-hub/arrays/06-rotate-array.md
+      - Find Pair Sum: practice-programs-hub/arrays/07-find-pair-sum.md
+      - Find Majority Element: practice-programs-hub/arrays/08-find-majority-element.md
+      - Find Subarray Sum: practice-programs-hub/arrays/09-find-subarray-sum.md
+      - Find Kth Largest: practice-programs-hub/arrays/10-find-kth-largest.md
+      - Find Longest Consecutive Sequence: practice-programs-hub/arrays/11-find-longest-consecutive-sequence.md
+      - Find Product Except Self: practice-programs-hub/arrays/12-find-product-except-self.md
+      - Find Maximum Subarray Sum: practice-programs-hub/arrays/13-find-maximum-subarray-sum.md
+      - Find Common Elements: practice-programs-hub/arrays/14-find-common-elements.md
+      - Find Median: practice-programs-hub/arrays/15-find-median.md
+      - Find Unique Element: practice-programs-hub/arrays/16-find-unique-element.md
+      - Find Intersection: practice-programs-hub/arrays/17-find-intersection.md
+      - Find First Missing Positive: practice-programs-hub/arrays/18-find-first-missing-positive.md
+      - Find Maximum Product Subarray: practice-programs-hub/arrays/19-find-maximum-product-subarray.md
+      - Find Maximum Sum Increasing Subsequence: practice-programs-hub/arrays/20-find-maximum-sum-increasing-subsequence.md
+      - Find Equilibrium Index: practice-programs-hub/arrays/21-find-equilibrium-index.md
+      - Find Leaders in Array: practice-programs-hub/arrays/22-find-leaders-in-array.md
+      - Find Smallest Subarray Sum: practice-programs-hub/arrays/23-find-smallest-subarray-sum.md
+      - Find Longest Palindromic Subarray: practice-programs-hub/arrays/24-find-longest-palindromic-subarray.md
+      - Find Maximum Circular Subarray Sum: practice-programs-hub/arrays/25-find-maximum-circular-subarray-sum.md
+      - Find Minimum in Rotated Sorted Array: practice-programs-hub/arrays/26-find-minimum-in-rotated-sorted-array.md
+      - Find Maximum Sum Non-Adjacent: practice-programs-hub/arrays/27-find-maximum-sum-non-adjacent.md
+      - Find Longest Subarray with Sum K: practice-programs-hub/arrays/28-find-longest-subarray-with-sum-k.md
+      - Find Subarray with Product Less Than K: practice-programs-hub/arrays/29-find-subarray-with-product-less-than-k.md
+      - Find Maximum Length of Equal 0s and 1s: practice-programs-hub/arrays/30-find-maximum-length-of-equal-0s-and-1s.md
 
 # Markdown extensions - expanded for richer content
 markdown_extensions:
