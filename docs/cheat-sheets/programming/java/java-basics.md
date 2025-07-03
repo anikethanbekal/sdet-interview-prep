@@ -83,16 +83,27 @@ int age = 30;
 
 ### Conditional Statements
 
-- **`if-else`**: Executes a block of code if a specified condition is true.
+- **`if-else-if`**: Executes different blocks of code based on multiple conditions.
   ```java
-  if (age > 18) {
-      System.out.println("Adult");
+  int time = 22;
+  if (time < 10) {
+      System.out.println("Good morning.");
+  } else if (time < 18) {
+      System.out.println("Good day.");
   } else {
-      System.out.println("Minor");
+      System.out.println("Good evening.");
   }
+  // Outputs "Good evening."
+  ```
+- **Short Hand If (Ternary Operator)**: A shorthand for the `if-else` statement.
+  ```java
+  int score = 75;
+  String result = (score >= 60) ? "Pass" : "Fail";
+  System.out.println(result); // Outputs "Pass"
   ```
 - **`switch`**: Selects one of many code blocks to be executed.
   ```java
+  int day = 4;
   switch (day) {
       case 1:
           System.out.println("Monday");
@@ -100,9 +111,25 @@ int age = 30;
       case 2:
           System.out.println("Tuesday");
           break;
+      case 3:
+          System.out.println("Wednesday");
+          break;
+      case 4:
+          System.out.println("Thursday");
+          break;
+      case 5:
+          System.out.println("Friday");
+          break;
+      case 6:
+          System.out.println("Saturday");
+          break;
+      case 7:
+          System.out.println("Sunday");
+          break;
       default:
-          System.out.println("Weekend");
+          System.out.println("Invalid day");
   }
+  // Outputs "Thursday"
   ```
 
 ### Loop Statements
@@ -129,20 +156,97 @@ int age = 30;
   }
   ```
 
+### `break` and `continue`
+
+- **`break`**: Used to jump out of a loop or a `switch` statement.
+  ```java
+  for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+          break; // Loop will terminate when i is 4
+      }
+      System.out.println(i);
+  }
+  // Outputs: 0, 1, 2, 3
+  ```
+- **`continue`**: Used to skip one iteration in a loop.
+  ```java
+  for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+          continue; // Skips the rest of the code for this iteration when i is 4
+      }
+      System.out.println(i);
+  }
+  // Outputs: 0, 1, 2, 3, 5, 6, 7, 8, 9
+  ```
+
 ---
 
 ## ✅ Methods
 
-A method is a block of code which only runs when it is called.
+A method is a block of code which only runs when it is called. Methods are used to perform certain actions, and they are also known as functions.
+
+### Defining a Method
 
 ```java
-// Defining a method
-public void myMethod() {
-    System.out.println("I just got executed!");
+public class MyClass {
+    // Method with no parameters and no return value
+    public void sayHello() {
+        System.out.println("Hello!");
+    }
+
+    // Method with parameters and a return value
+    public int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    // Static method (belongs to the class, not an object)
+    public static void staticMethodExample() {
+        System.out.println("This is a static method.");
+    }
+}
+```
+
+### Calling a Method
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass(); // Create an object of MyClass
+        obj.sayHello(); // Call sayHello method
+
+        int sum = obj.addNumbers(5, 3); // Call addNumbers method and store result
+        System.out.println("Sum: " + sum); // Outputs: Sum: 8
+
+        MyClass.staticMethodExample(); // Call static method directly using class name
+    }
+}
+```
+
+### Method Parameters
+
+Information can be passed to methods as parameters. Parameters act as variables inside the method.
+
+```java
+public void displayMessage(String message) {
+    System.out.println("Message: " + message);
 }
 
-// Calling a method
-myMethod();
+// Calling:
+// obj.displayMessage("Welcome to Java!");
+```
+
+### Return Values
+
+The `void` keyword indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (like `int`, `char`, etc.) or a reference data type (like `String`, `Array`, etc.) instead of `void`, and use the `return` keyword inside the method.
+
+```java
+public int multiply(int x, int y) {
+    return x * y;
+}
+
+// Calling:
+// int product = obj.multiply(4, 5);
+// System.out.println(product); // Outputs: 20
 ```
 
 ---

@@ -55,9 +55,11 @@ nav:
     - Programming:
       - Java:
         - Java Basics: cheat-sheets/programming/java/java-basics.md
+        - Java Arrays: cheat-sheets/programming/java/java-arrays.md
         - Java Keywords: cheat-sheets/programming/java/java-keywords.md
         - String Handling: cheat-sheets/programming/java/string-handling.md
         - Collections Framework: cheat-sheets/programming/java/collections-framework.md
+        - Collections Framework Summary: cheat-sheets/programming/java/collections-summary.md
         - OOP Concepts: cheat-sheets/programming/java/oop-concepts.md
         - Exception Handling: cheat-sheets/programming/java/exception-handling.md
         - File I/O: cheat-sheets/programming/java/file-io.md

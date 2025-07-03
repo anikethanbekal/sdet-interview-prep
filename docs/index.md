@@ -109,7 +109,7 @@ Welcome! Your all-in-one resource for SDET, DSA, System Design, and coding inter
 
 ---
 
-## 🏆 How to Use This Site
+## ℹ️ How to Use This Site
 
 - Use the left navigation menu to jump to any topic.
 - Each section contains detailed notes, code samples, and best practices.
