@@ -263,7 +263,7 @@
     │   │   ├── 27-find-maximum-sum-non-adjacent
     │   │   ├── 28-find-longest-subarray-with-sum-k
     │   │   ├── 29-find-subarray-with-product-less-than-k
-    │   │   └── 30-find-maximum-length-of-equal-0s-and-1s
+    │   │   └── 30-find-maximum-length_of_equal_0s_and_1s
     │   ├── index.html
     │   ├── numbers
     │   │   ├── 01-is-prime
@@ -349,38 +349,39 @@
     │       ├── Regex_Pattern_Matching__extract_all_numbers_from_a_string
     │       ├── Regex_Pattern_Matching__extract_domain_name_from_url
     │       ├── Regex_Pattern_Matching__find_and_mask_credit_card_numbers_in_text
-    │       ├── Regex_Pattern_Matching__match_and_extract_hashtags_from_a_tweet.md
-    │       ├── Regex_Pattern_Matching__replace_all_html_tags_in_a_string.md
-    │       ├── Regex_Pattern_Matching__validate_a_phone_number_format_eg_123_456-7890.md
-    │       ├── Regex_Pattern_Matching__validate_a_strong_password_at_least_1_digit_1_uppercase_1_special_char.md
-    │       ├── Regex_Pattern_Matching__validate_email_address_using_regex.md
-    │       ├── Regex_Pattern_Matching__validate_ipv4_ipv6_address.md
-    │       ├── RemoveLeadingZeros.md
-    │       ├── ReplaceChar.md
-    │       ├── SDET_Use_Cases__automate_test_case_naming_conventions_from_string_inputs.md
-    │       ├── SDET_Use_Cases__check_case_sensitivity_issues_in_user_input_validations.md
-    │       ├── SDET_Use_Cases__compare_two_large_json_strings_as_string_comparison.md
-    │       ├── SDET_Use_Cases__create_dynamic_selectors_using_string_concatenation_in_selenium.md
-    │       ├── SDET_Use_Cases__extract_tokens_from_authorization_headers.md
-    │       ├── SDET_Use_Cases__generate_dynamic_test_data_using_string_patterns.md
-    │       ├── SDET_Use_Cases__parse_a_log_file_and_extract_error_messages.md
-    │       ├── SDET_Use_Cases__sanitize_input_strings_to_prevent_xss_attacks.md
-    │       ├── SDET_Use_Cases__validate_api_response_fields_using_string_assertions.md
-    │       ├── SDET_Use_Cases__validate_urls_and_redirect_strings_in_automation_tests.md
-    │       ├── String_Algorithms__check_if_two_strings_are_one_edit_away.md
-    │       ├── String_Algorithms__count_and_group_anagrams_in_a_list_of_strings.md
-    │       ├── String_Algorithms__encode_and_decode_strings_like_in_url_shorteners.md
-    │       ├── String_Algorithms__find_all_permutations_of_a_string.md
-    │       ├── String_Algorithms__find_the_longest_common_prefix_among_a_set_of_strings.md
-    │       ├── String_Algorithms__find_the_longest_substring_without_repeating_characters.md
-    │       ├── String_Algorithms__implement_basic_string_compression.md
-    │       ├── String_Algorithms__implement_strstr_-_find_the_index_of_the_first_occurrence_of_substring.md
-    │       ├── String_Algorithms__longest_palindromic_substring.md
-    │       ├── String_Algorithms__run-length_encoding_of_a_string.md
+    │       ├── Regex_Pattern_Matching__match_and_extract_hashtags_from_a_tweet
+    │       ├── Regex_Pattern_Matching__replace_all_html_tags_in_a_string
+    │       ├── Regex_Pattern_Matching__validate_a_phone_number_format_eg_123_456-7890
+    │       ├── Regex_Pattern_Matching__validate_a_strong_password_at_least_1_digit_1_uppercase_1_special_char
+    │       ├── Regex_Pattern_Matching__validate_email_address_using_regex
+    │       ├── Regex_Pattern_Matching__validate_ipv4_ipv6_address
+    │       ├── RemoveLeadingZeros
+    │       ├── ReplaceChar
+    │       ├── SDET_Use_Cases__automate_test_case_naming_conventions_from_string_inputs
+    │       ├── SDET_Use_Cases__check_case_sensitivity_issues_in_user_input_validations
+    │       ├── SDET_Use_Cases__compare_two_large_json_strings_as_string_comparison
+    │       ├── SDET_Use_Cases__create_dynamic_selectors_using_string_concatenation_in_selenium
+    │       ├── SDET_Use_Cases__extract_tokens_from_authorization_headers
+    │       ├── SDET_Use_Cases__generate_dynamic_test_data_using_string_patterns
+    │       ├── SDET_Use_Cases__parse_a_log_file_and_extract_error_messages
+    │       ├── SDET_Use_Cases__sanitize_input_strings_to_prevent_xss_attacks
+    │       ├── SDET_Use_Cases__validate_api_response_fields_using_string_assertions
+    │       ├── SDET_Use_Cases__validate_urls_and_redirect_strings_in_automation_tests
+    │       ├── String_Algorithms__check_if_two_strings_are_one_edit_away
+    │       ├── String_Algorithms__count_and_group_anagrams_in_a_list_of_strings
+    │       ├── String_Algorithms__encode_and_decode_strings_like_in_url_shorteners
+    │       ├── String_Algorithms__find_all_permutations_of_a_string
+    │       ├── String_Algorithms__find_the_longest_common_prefix_among_a_set_of_strings
+    │       ├── String_Algorithms__find_the_longest_substring_without_repeating_characters
+    │       ├── String_Algorithms__implement_basic_string_compression
+    │       ├── String_Algorithms__implement_strstr_-_find_the_index_of_the_first_occurrence_of_substring
+    │       ├── String_Algorithms__longest_palindromic_substring
+    │       ├── String_Algorithms__run-length_encoding_of_a_string
     │       └── SwapPairs.md
     ├── search
     │   └── search_index.json
     ├── sitemap.xml
+    │   └── index.html
     ├── sitemap.xml.gz
     ├── stylesheets
     │   ├── extra.css
