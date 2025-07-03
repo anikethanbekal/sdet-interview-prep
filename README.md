@@ -2,8 +2,10 @@
 This includes interview cheat sheets for SDET/QA Engineers
 
 ## Introduction
-    This is MkDocs material which is on top of MkDocs which provide more functionality. 
-    ***Note:*** This is active developing repo. Expect changes frequently.
+    This is MkDocs material which is on top of MkDocs and provides more functionality. 
+    ***Note:*** This is an actively developing repository. Expect changes frequently. 
+    ***Disclaimer:*** Some of the contents in this repository are generated with the assistance of GPT.
+
 ## How to Use This Repository
 
 ### Local Development
