@@ -4,6 +4,11 @@ Welcome! Your all-in-one resource for SDET, DSA, System Design, and coding inter
 
 ---
 
+***Note:*** This repository is under active development. Expect frequent updates.  
+***Disclaimer:*** Some of the contents in this repository are generated with the assistance of GPT.
+
+---
+
 ## 🚀 Quick Links
 
 | [Cheat Sheets](cheat-sheets/StandardTemplate.md) | [Interview Qs](interview-questions/sdet-technical.md) | [Practice Hub](practice-programs-hub/README.md) | [Tech Guide](tech-essentials-guide/testing-concepts/manual-testing-basics.md) |
