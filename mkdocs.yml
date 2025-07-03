@@ -52,9 +52,46 @@ nav:
           - Selenium-JSExecutor: cheat-sheets/testing/automation/selenium-jsExecutor.md
           - Selenium-Difference: cheat-sheets/testing/automation/selenium-difference.md
       - Manual Testing Overview: cheat-sheets/testing/manual/basics-manual-testing.md
+    - Programming:
+      - Java:
+        - Java Basics: cheat-sheets/programming/java/java-basics.md
+        - Java Keywords: cheat-sheets/programming/java/java-keywords.md
+        - String Handling: cheat-sheets/programming/java/string-handling.md
+        - Collections Framework: cheat-sheets/programming/java/collections-framework.md
+        - OOP Concepts: cheat-sheets/programming/java/oop-concepts.md
+        - Exception Handling: cheat-sheets/programming/java/exception-handling.md
+        - File I/O: cheat-sheets/programming/java/file-io.md
+        - Java 8 Features: cheat-sheets/programming/java/java-8-features.md
+        - Advanced Java Topics: cheat-sheets/programming/java/advanced-java-topics.md
+        - Java Differences: cheat-sheets/programming/java/java-differences.md
+        - Java Definitions: cheat-sheets/programming/java/java-definitions.md
+      - Python:
+        - Python Basics: cheat-sheets/programming/python/python-basics.md
+        - Python Keywords: cheat-sheets/programming/python/python-keywords.md
+        - Python Strings: cheat-sheets/programming/python/python-strings.md
+        - Python Collections: cheat-sheets/programming/python/python-collections.md
+        - Python OOP: cheat-sheets/programming/python/python-oop.md
+        - Python Exceptions: cheat-sheets/programming/python/python-exceptions.md
+        - Python File I/O: cheat-sheets/programming/python/python-file-io.md
+        - Advanced Python Topics: cheat-sheets/programming/python/python-advanced.md
+        - Python Differences: cheat-sheets/programming/python/python-differences.md
+        - Python Definitions: cheat-sheets/programming/python/python-definitions.md
   - Essentials Guide:
     - Testing Concepts:
       - Manual Testing Basics: tech-essentials-guide/testing-concepts/manual-testing-basics.md
+    - Programming:
+      - Java:
+        - Advanced OOP in Java: tech-essentials-guide/programming/java/oop.md
+        - Java Collections Deep Dive: tech-essentials-guide/programming/java/collections.md
+        - Concurrency and Multithreading: tech-essentials-guide/programming/java/concurrency.md
+        - Build Tools: 
+          - Maven & Gradle: tech-essentials-guide/programming/java/build-tools.md
+      - Python:
+        - Advanced Data Structures: tech-essentials-guide/programming/python/data-structures.md
+        - Functional Programming in Python: tech-essentials-guide/programming/python/functional-programming.md
+        - Concurrency and Asynchronous Programming: tech-essentials-guide/programming/python/concurrency.md
+        - Package Management: 
+          - Pip & Poetry: tech-essentials-guide/programming/python/package-management.md
   - Practice Programs:
     - Strings:
       - Character Count: practice-programs-hub/strings/CharacterCount.md

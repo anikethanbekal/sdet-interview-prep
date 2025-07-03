@@ -1,32 +1,402 @@
-. sdet-interview-prep
-└── interview-preparation
-    ├── mkdocs.yml
-    ├── projectStructure.txt
-    ├── README.md
-    └── docs/
-        ├── javascripts/
-        │   └── extra.js
-        ├── stylesheets/
-        │   └── extra.css
-        ├── cheat-sheets/
-        │   ├── StandardTemplate.md
-        │   ├── testing/
-        │   │   ├── manual/
-        │   │   └── automation/
-        │   ├── os/
-        │   ├── ci-cd/
-        │   └── misc/
-        ├── interview-questions/
-        │   └── testing/
-        │       ├── manual/
-        │       ├── automation/
-        │       ├── os/
-        │       ├── ci-cd/
-        │       └── misc/
-        └── practice-programs-hub
-            ├── StandardFormat.md
-            ├── strings/
-            ├── dsa/
-            └── numbers/
+.
+├── build_docs.sh
+├── docs
+│   ├── cheat-sheets
+│   │   ├── ci-cd
+│   │   ├── misc
+│   │   ├── os
+│   │   ├── programming
+│   │   │   ├── java
+│   │   │   └── python
+│   │   ├── randomForlater.txt
+│   │   ├── StandardTemplate.md
+│   │   ├── testing
+│   │   │   ├── automation
+│   │   │   └── manual
+│   │   └── ToDo
+│   ├── index.md
+│   ├── interview-questions
+│   │   └── sdet-technical.md
+│   ├── javascripts
+│   │   └── extra.js
+│   ├── overrides
+│   │   └── main.html
+│   ├── practice-programs-hub
+│   │   ├── arrays
+│   │   │   ├── 01-find-largest-element.md
+│   │   │   ├── 02-reverse-array.md
+│   │   │   ├── 03-find-second-largest.md
+│   │   │   ├── 04-find-missing-number.md
+│   │   │   ├── 05-find-duplicate.md
+│   │   │   ├── 06-rotate-array.md
+│   │   │   ├── 07-find-pair-sum.md
+│   │   │   ├── 08-find-majority-element.md
+│   │   │   ├── 09-find-subarray-sum.md
+│   │   │   ├── 10-find-kth-largest.md
+│   │   │   ├── 11-find-longest-consecutive-sequence.md
+│   │   │   ├── 12-find-product-except-self.md
+│   │   │   ├── 13-find-maximum-subarray-sum.md
+│   │   │   ├── 14-find-common-elements.md
+│   │   │   ├── 15-find-median.md
+│   │   │   ├── 16-find-unique-element.md
+│   │   │   ├── 17-find-intersection.md
+│   │   │   ├── 18-find-first-missing-positive.md
+│   │   │   ├── 19-find-maximum-product-subarray.md
+│   │   │   ├── 20-find-maximum-sum-increasing-subsequence.md
+│   │   │   ├── 21-find-equilibrium-index.md
+│   │   │   ├── 22-find-leaders-in-array.md
+│   │   │   ├── 23-find-smallest-subarray-sum.md
+│   │   │   ├── 24-find-longest-palindromic-subarray.md
+│   │   │   ├── 25-find-maximum-circular-subarray-sum.md
+│   │   │   ├── 26-find-minimum-in-rotated-sorted-array.md
+│   │   │   ├── 27-find-maximum-sum-non-adjacent.md
+│   │   │   ├── 28-find-longest-subarray-with-sum-k.md
+│   │   │   ├── 29-find-subarray-with-product-less-than-k.md
+│   │   │   └── 30-find-maximum-length-of-equal-0s-and-1s.md
+│   │   ├── numbers
+│   │   │   ├── 01-is-prime.md
+│   │   │   ├── 02-factorial.md
+│   │   │   ├── 03-fibonacci.md
+│   │   │   ├── 04-gcd.md
+│   │   │   ├── 05-lcm.md
+│   │   │   ├── 06-palindrome-number.md
+│   │   │   ├── 07-armstrong-number.md
+│   │   │   ├── 08-reverse-number.md
+│   │   │   ├── 09-sum-of-digits.md
+│   │   │   ├── 10-count-digits.md
+│   │   │   ├── 11-sum-n-numbers.md
+│   │   │   ├── 12-sum-n-even-numbers.md
+│   │   │   ├── 13-sum-n-odd-numbers.md
+│   │   │   ├── 14-power-of-two.md
+│   │   │   ├── 15-count-set-bits.md
+│   │   │   ├── 16-swap-numbers.md
+│   │   │   ├── 17-generate-primes.md
+│   │   │   ├── 18-prime-factors.md
+│   │   │   ├── 19-find-largest-number.md
+│   │   │   ├── 20-find-smallest-number.md
+│   │   │   ├── 21-sum-of-array.md
+│   │   │   ├── 22-average-of-array.md
+│   │   │   ├── 23-find-second-largest.md
+│   │   │   ├── 24-find-second-smallest.md
+│   │   │   ├── 25-swap-two-numbers.md
+│   │   │   ├── 26-reverse-number.md
+│   │   │   ├── 27-check-armstrong-number.md
+│   │   │   ├── 28-check-perfect-number.md
+│   │   │   ├── 29-check-abundant-number.md
+│   │   │   ├── 30-check-harshad-number.md
+│   │   │   ├── 31-check-automorphic-number.md
+│   │   │   ├── 32-check-neon-number.md
+│   │   │   ├── 33-check-spy-number.md
+│   │   │   ├── 34-check-magic-number.md
+│   │   │   ├── 35-check-happy-number.md
+│   │   │   ├── 36-check-niven-number.md
+│   │   │   ├── 37-check-pronic-number.md
+│   │   │   ├── 38-check-palindrome-number.md
+│   │   │   ├── 39-check-cyclic-number.md
+│   │   │   ├── 40-check-kaprekar-number.md
+│   │   │   ├── 41-check-evil-number.md
+│   │   │   ├── 42-check-odious-number.md
+│   │   │   ├── 43-check-lucky-number.md
+│   │   │   ├── 44-check-sphenic-number.md
+│   │   │   ├── 45-check-composite-number.md
+│   │   │   ├── 46-check-circular-prime.md
+│   │   │   ├── 47-check-emirp-number.md
+│   │   │   ├── 48-check-twisted-prime.md
+│   │   │   ├── 49-check-unique-number.md
+│   │   │   └── 50-check-repdigit-number.md
+│   │   ├── README.md
+│   │   ├── StandardFormat.md
+│   │   └── strings
+│   │       ├── Advanced_System_Tasks__build_a_string_search_with_case-insensitive_and_diacritic-insensitive_support.md
+│   │       ├── Advanced_System_Tasks__implement_a_basic_string_tokenizer_like_split.md
+│   │       ├── Advanced_System_Tasks__implement_a_simple_diff_checker_between_two_strings.md
+│   │       ├── Advanced_System_Tasks__simulate_string_search_using_kmp_algorithm.md
+│   │       ├── Advanced_System_Tasks__write_a_custom_string_formatter_like_pythons_format_or_javas_messageformat.md
+│   │       ├── AnagramCheck.md
+│   │       ├── CharacterCount.md
+│   │       ├── Core_String_Manipulation__check_if_a_string_contains_only_digits.md
+│   │       ├── Core_String_Manipulation__check_if_a_string_is_a_palindrome.md
+│   │       ├── Core_String_Manipulation__check_if_two_strings_are_anagrams.md
+│   │       ├── Core_String_Manipulation__convert_a_string_to_title_case.md
+│   │       ├── Core_String_Manipulation__count_vowels_and_consonants_in_a_string.md
+│   │       ├── Core_String_Manipulation__find_the_first_non-repeating_character.md
+│   │       ├── Core_String_Manipulation__remove_all_occurrences_of_a_given_character.md
+│   │       ├── Core_String_Manipulation__remove_duplicate_characters_from_a_string.md
+│   │       ├── Core_String_Manipulation__replace_all_spaces_with_%20.md
+│   │       ├── Core_String_Manipulation__reverse_a_string_without_using_built-in_functions.md
+│   │       ├── CountOccurrenceCharcter.md
+│   │       ├── CountUppecaseCharacter.md
+│   │       ├── CountVowelUsingGoogleGuava.md
+│   │       ├── DuplicateCharacters.md
+│   │       ├── Internationalization_Edge_Cases__check_for_emoji_presence_in_a_string.md
+│   │       ├── Internationalization_Edge_Cases__count_words_in_a_multilingual_string.md
+│   │       ├── Internationalization_Edge_Cases__handle_and_validate_right-to-left_languages_like_arabic.md
+│   │       ├── Internationalization_Edge_Cases__normalize_unicode_strings_eg_café_vs_café.md
+│   │       ├── Internationalization_Edge_Cases__remove_diacritics_accents_from_letters.md
+│   │       ├── Regex_Pattern_Matching__check_if_a_string_is_a_valid_date_eg_dd-mm-yyyy.md
+│   │       ├── Regex_Pattern_Matching__extract_all_numbers_from_a_string.md
+│   │       ├── Regex_Pattern_Matching__extract_domain_name_from_url.md
+│   │       ├── Regex_Pattern_Matching__find_and_mask_credit_card_numbers_in_text.md
+│   │       ├── Regex_Pattern_Matching__match_and_extract_hashtags_from_a_tweet.md
+│   │       ├── Regex_Pattern_Matching__replace_all_html_tags_in_a_string.md
+│   │       ├── Regex_Pattern_Matching__validate_a_phone_number_format_eg_123_456-7890.md
+│   │       ├── Regex_Pattern_Matching__validate_a_strong_password_at_least_1_digit_1_uppercase_1_special_char.md
+│   │       ├── Regex_Pattern_Matching__validate_email_address_using_regex.md
+│   │       ├── Regex_Pattern_Matching__validate_ipv4_ipv6_address.md
+│   │       ├── RemoveLeadingZeros.md
+│   │       ├── ReplaceChar.md
+│   │       ├── SDET_Use_Cases__automate_test_case_naming_conventions_from_string_inputs.md
+│   │       ├── SDET_Use_Cases__check_case_sensitivity_issues_in_user_input_validations.md
+│   │       ├── SDET_Use_Cases__compare_two_large_json_strings_as_string_comparison.md
+│   │       ├── SDET_Use_Cases__create_dynamic_selectors_using_string_concatenation_in_selenium.md
+│   │       ├── SDET_Use_Cases__extract_tokens_from_authorization_headers.md
+│   │       ├── SDET_Use_Cases__generate_dynamic_test_data_using_string_patterns.md
+│   │       ├── SDET_Use_Cases__parse_a_log_file_and_extract_error_messages.md
+│   │       ├── SDET_Use_Cases__sanitize_input_strings_to_prevent_xss_attacks.md
+│   │       ├── SDET_Use_Cases__validate_api_response_fields_using_string_assertions.md
+│   │       ├── SDET_Use_Cases__validate_urls_and_redirect_strings_in_automation_tests.md
+│   │       ├── String_Algorithms__check_if_two_strings_are_one_edit_away.md
+│   │       ├── String_Algorithms__count_and_group_anagrams_in_a_list_of_strings.md
+│   │       ├── String_Algorithms__encode_and_decode_strings_like_in_url_shorteners.md
+│   │       ├── String_Algorithms__find_all_permutations_of_a_string.md
+│   │       ├── String_Algorithms__find_the_longest_common_prefix_among_a_set_of_strings.md
+│   │       ├── String_Algorithms__find_the_longest_substring_without_repeating_characters.md
+│   │       ├── String_Algorithms__implement_basic_string_compression.md
+│   │       ├── String_Algorithms__implement_strstr_-_find_the_index_of_the_first_occurrence_of_substring.md
+│   │       ├── String_Algorithms__longest_palindromic_substring.md
+│   │       ├── String_Algorithms__run-length_encoding_of_a_string.md
+│   │       └── SwapPairs.md
+│   ├── stylesheets
+│   │   ├── extra.css
+│   │   └── extra.css.bak
+│   ├── tech-essentials-guide
+│   │   ├── api-testing
+│   │   │   ├── postman
+│   │   │   └── rest-assured
+│   │   ├── automation-frameworks
+│   │   │   ├── junit
+│   │   │   ├── pytest
+│   │   │   └── testng
+│   │   ├── ci-cd
+│   │   │   └── github-actions.md
+│   │   ├── performance-testing
+│   │   │   └── jmeter
+│   │   ├── programming
+│   │   │   ├── index.md
+│   │   │   ├── java
+│   │   │   └── python
+│   │   ├── README.md
+│   │   ├── selenium-playwright
+│   │   │   ├── java-selenium
+│   │   │   └── python-playwright
+│   │   └── testing-concepts
+│   │       ├── manual-testing-basics.md
+│   │       ├── manual-testing-detailed.md
+│   │       └── test-pyramid.md
+│   └── TODO
+├── mkdocs.yml
+├── OwnerNote.txt
+├── projectStructure_temp.txt
+├── projectStructure.txt
+├── README.md
+├── requirements.txt
+├── setup_local.sh
+└── site
+    ├── 404.html
+    ├── assets
+    │   ├── images
+    │   │   └── favicon.png
+    │   ├── javascripts
+    │   │   ├── bundle.13a4f30d.min.js
+    │   │   ├── bundle.13a4f30d.min.js.map
+    │   │   ├── lunr
+    │   │   └── workers
+    │   └── stylesheets
+    │       ├── main.342714a4.min.css
+    │       ├── main.342714a4.min.css.map
+    │       ├── palette.06af60db.min.css
+    │       └── palette.06af60db.min.css.map
+    ├── cheat-sheets
+    │   ├── randomForlater.txt
+    │   ├── StandardTemplate
+    │   │   └── index.html
+    │   ├── testing
+    │   │   ├── automation
+    │   │   └── manual
+    │   └── ToDo
+    ├── index.html
+    ├── interview-questions
+    │   └── sdet-technical
+    │       └── index.html
+    ├── javascripts
+    │   └── extra.js
+    ├── overrides
+    │   └── main.html
+    ├── practice-programs-hub
+    │   ├── arrays
+    │   │   ├── 01-find-largest-element
+    │   │   ├── 02-reverse-array
+    │   │   ├── 03-find-second-largest
+    │   │   ├── 04-find-missing-number
+    │   │   ├── 05-find-duplicate
+    │   │   ├── 06-rotate-array
+    │   │   ├── 07-find-pair-sum
+    │   │   ├── 08-find-majority-element
+    │   │   ├── 09-find-subarray-sum
+    │   │   ├── 10-find-kth-largest
+    │   │   ├── 11-find-longest-consecutive-sequence
+    │   │   ├── 12-find-product-except-self
+    │   │   ├── 13-find-maximum-subarray-sum
+    │   │   ├── 14-find-common-elements
+    │   │   ├── 15-find-median
+    │   │   ├── 16-find-unique-element
+    │   │   ├── 17-find-intersection
+    │   │   ├── 18-find-first-missing-positive
+    │   │   ├── 19-find-maximum-product-subarray
+    │   │   ├── 20-find-maximum-sum-increasing-subsequence
+    │   │   ├── 21-find-equilibrium-index
+    │   │   ├── 22-find-leaders-in-array
+    │   │   ├── 23-find-smallest-subarray-sum
+    │   │   ├── 24-find-longest-palindromic-subarray
+    │   │   ├── 25-find-maximum-circular-subarray-sum
+    │   │   ├── 26-find-minimum-in-rotated-sorted-array
+    │   │   ├── 27-find-maximum-sum-non-adjacent
+    │   │   ├── 28-find-longest-subarray-with-sum-k
+    │   │   ├── 29-find-subarray-with-product-less-than-k
+    │   │   └── 30-find-maximum-length-of-equal-0s-and-1s
+    │   ├── index.html
+    │   ├── numbers
+    │   │   ├── 01-is-prime
+    │   │   ├── 02-factorial
+    │   │   ├── 03-fibonacci
+    │   │   ├── 04-gcd
+    │   │   ├── 05-lcm
+    │   │   ├── 06-palindrome-number
+    │   │   ├── 07-armstrong-number
+    │   │   ├── 08-reverse-number
+    │   │   ├── 09-sum-of-digits
+    │   │   ├── 10-count-digits
+    │   │   ├── 11-sum-n-numbers
+    │   │   ├── 12-sum-n-even-numbers
+    │   │   ├── 13-sum-n-odd-numbers
+    │   │   ├── 14-power-of-two
+    │   │   ├── 15-count-set-bits
+    │   │   ├── 16-swap-numbers
+    │   │   ├── 17-generate-primes
+    │   │   ├── 18-prime-factors
+    │   │   ├── 19-find-largest-number
+    │   │   ├── 20-find-smallest-number
+    │   │   ├── 21-sum-of-array
+    │   │   ├── 22-average-of-array
+    │   │   ├── 23-find-second-largest
+    │   │   ├── 24-find-second-smallest
+    │   │   ├── 25-swap-two-numbers
+    │   │   ├── 26-reverse-number
+    │   │   ├── 27-check-armstrong-number
+    │   │   ├── 28-check-perfect-number
+    │   │   ├── 29-check-abundant-number
+    │   │   ├── 30-check-harshad-number
+    │   │   ├── 31-check-automorphic-number
+    │   │   ├── 32-check-neon-number
+    │   │   ├── 33-check-spy-number
+    │   │   ├── 34-check-magic-number
+    │   │   ├── 35-check-happy-number
+    │   │   ├── 36-check-niven-number
+    │   │   ├── 37-check-pronic-number
+    │   │   ├── 38-check-palindrome-number
+    │   │   ├── 39-check-cyclic-number
+    │   │   ├── 40-check-kaprekar-number.md
+    │   │   ├── 41-check-evil-number.md
+    │   │   ├── 42-check-odious-number.md
+    │   │   ├── 43-check-lucky-number.md
+    │   │   ├── 44-check-sphenic-number.md
+    │   │   ├── 45-check-composite-number.md
+    │   │   ├── 46-check-circular-prime.md
+    │   │   ├── 47-check-emirp-number.md
+    │   │   ├── 48-check-twisted-prime.md
+    │   │   ├── 49-check-unique-number.md
+    │   │   └── 50-check-repdigit-number.md
+    │   ├── StandardFormat
+    │   │   └── index.html
+    │   └── strings
+    │       ├── Advanced_System_Tasks__build_a_string_search_with_case-insensitive_and_diacritic-insensitive_support
+    │       ├── Advanced_System_Tasks__implement_a_basic_string_tokenizer_like_split
+    │       ├── Advanced_System_Tasks__implement_a_simple_diff_checker_between_two_strings
+    │       ├── Advanced_System_Tasks__simulate_string_search_using_kmp_algorithm
+    │       ├── Advanced_System_Tasks__write_a_custom_string_formatter_like_pythons_format_or_javas_messageformat
+    │       ├── AnagramCheck
+    │       ├── CharacterCount
+    │       ├── Core_String_Manipulation__check_if_a_string_contains_only_digits
+    │       ├── Core_String_Manipulation__check_if_a_string_is_a_palindrome
+    │       ├── Core_String_Manipulation__check_if_two_strings_are_anagrams
+    │       ├── Core_String_Manipulation__convert_a_string_to_title_case
+    │       ├── Core_String_Manipulation__count_vowels_and_consonants_in_a_string
+    │       ├── Core_String_Manipulation__find_the_first_non-repeating_character
+    │       ├── Core_String_Manipulation__remove_all_occurrences_of_a_given_character
+    │       ├── Core_String_Manipulation__remove_duplicate_characters_from_a_string
+    │       ├── Core_String_Manipulation__replace_all_spaces_with_%20
+    │       ├── Core_String_Manipulation__reverse_a_string_without_using_built-in_functions
+    │       ├── CountOccurrenceCharcter
+    │       ├── CountUppecaseCharacter
+    │       ├── CountVowelUsingGoogleGuava
+    │       ├── DuplicateCharacters
+    │       ├── Internationalization_Edge_Cases__check_for_emoji_presence_in_a_string
+    │       ├── Internationalization_Edge_Cases__count_words_in_a_multilingual_string
+    │       ├── Internationalization_Edge_Cases__handle_and_validate_right-to-left_languages_like_arabic
+    │       ├── Internationalization_Edge_Cases__normalize_unicode_strings_eg_café_vs_café
+    │       ├── Internationalization_Edge_Cases__remove_diacritics_accents_from_letters
+    │       ├── Regex_Pattern_Matching__check_if_a_string_is_a_valid_date_eg_dd-mm-yyyy
+    │       ├── Regex_Pattern_Matching__extract_all_numbers_from_a_string
+    │       ├── Regex_Pattern_Matching__extract_domain_name_from_url
+    │       ├── Regex_Pattern_Matching__find_and_mask_credit_card_numbers_in_text
+    │       ├── Regex_Pattern_Matching__match_and_extract_hashtags_from_a_tweet.md
+    │       ├── Regex_Pattern_Matching__replace_all_html_tags_in_a_string.md
+    │       ├── Regex_Pattern_Matching__validate_a_phone_number_format_eg_123_456-7890.md
+    │       ├── Regex_Pattern_Matching__validate_a_strong_password_at_least_1_digit_1_uppercase_1_special_char.md
+    │       ├── Regex_Pattern_Matching__validate_email_address_using_regex.md
+    │       ├── Regex_Pattern_Matching__validate_ipv4_ipv6_address.md
+    │       ├── RemoveLeadingZeros.md
+    │       ├── ReplaceChar.md
+    │       ├── SDET_Use_Cases__automate_test_case_naming_conventions_from_string_inputs.md
+    │       ├── SDET_Use_Cases__check_case_sensitivity_issues_in_user_input_validations.md
+    │       ├── SDET_Use_Cases__compare_two_large_json_strings_as_string_comparison.md
+    │       ├── SDET_Use_Cases__create_dynamic_selectors_using_string_concatenation_in_selenium.md
+    │       ├── SDET_Use_Cases__extract_tokens_from_authorization_headers.md
+    │       ├── SDET_Use_Cases__generate_dynamic_test_data_using_string_patterns.md
+    │       ├── SDET_Use_Cases__parse_a_log_file_and_extract_error_messages.md
+    │       ├── SDET_Use_Cases__sanitize_input_strings_to_prevent_xss_attacks.md
+    │       ├── SDET_Use_Cases__validate_api_response_fields_using_string_assertions.md
+    │       ├── SDET_Use_Cases__validate_urls_and_redirect_strings_in_automation_tests.md
+    │       ├── String_Algorithms__check_if_two_strings_are_one_edit_away.md
+    │       ├── String_Algorithms__count_and_group_anagrams_in_a_list_of_strings.md
+    │       ├── String_Algorithms__encode_and_decode_strings_like_in_url_shorteners.md
+    │       ├── String_Algorithms__find_all_permutations_of_a_string.md
+    │       ├── String_Algorithms__find_the_longest_common_prefix_among_a_set_of_strings.md
+    │       ├── String_Algorithms__find_the_longest_substring_without_repeating_characters.md
+    │       ├── String_Algorithms__implement_basic_string_compression.md
+    │       ├── String_Algorithms__implement_strstr_-_find_the_index_of_the_first_occurrence_of_substring.md
+    │       ├── String_Algorithms__longest_palindromic_substring.md
+    │       ├── String_Algorithms__run-length_encoding_of_a_string.md
+    │       └── SwapPairs.md
+    ├── search
+    │   └── search_index.json
+    ├── sitemap.xml
+    ├── sitemap.xml.gz
+    ├── stylesheets
+    │   ├── extra.css
+    │   └── extra.css.bak
+    ├── tech-essentials-guide
+    │   ├── api-testing
+    │   │   └── rest-assured
+    │   ├── ci-cd
+    │   │   └── github-actions
+    │   ├── index.html
+    │   ├── selenium-playwright
+    │   │   └── java-selenium
+    │   └── testing-concepts
+    │       ├── manual-testing-basics
+    │       ├── manual-testing-detailed
+    │       └── test-pyramid
+    └── TODO
 
-        Add tech-essentials-guide
+211 directories, 189 files
