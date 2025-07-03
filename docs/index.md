@@ -11,7 +11,7 @@ Welcome! Your all-in-one resource for SDET, DSA, System Design, and coding inter
 
 ## 🚀 Quick Links
 
-| [Cheat Sheets](cheat-sheets/StandardTemplate.md) | [Interview Qs](interview-questions/sdet-technical.md) | [Practice Hub](practice-programs-hub/README.md) | [Tech Guide](tech-essentials-guide/testing-concepts/manual-testing-basics.md) |
+| [Cheat Sheets](cheat-sheets/programming/java/java-basics.md) | [Interview Qs](interview-questions/sdet-technical.md) | [Practice Hub](practice-programs-hub/README.md) | [Tech Guide](tech-essentials-guide/programming/index.md) |
 |---|---|---|---|
 
 ---
@@ -19,16 +19,16 @@ Welcome! Your all-in-one resource for SDET, DSA, System Design, and coding inter
 ## 🗂️ Main Sections
 
 ### 📚 Cheat Sheets
+- [Java Cheat Sheets](cheat-sheets/programming/java/java-basics.md)
+- [Python Cheat Sheets](cheat-sheets/programming/python/python-basics.md)
 - [Manual Testing](cheat-sheets/testing/manual/basics-manual-testing/)
 - [Automation (Selenium, etc.)](cheat-sheets/testing/automation/selenium/)
-- [Standard Template](cheat-sheets/StandardTemplate/)
-- [Random Notes](cheat-sheets/randomForlater.txt)
-- [To-Do](cheat-sheets/ToDo)
 
 ### 💡 Interview Questions
 - [SDET Technical](interview-questions/sdet-technical/)
 
 ### 🏗️ Tech Essentials Guide
+- [Programming (Java & Python)](tech-essentials-guide/programming/index.md)
 - [Testing Concepts](tech-essentials-guide/testing-concepts/manual-testing-basics/)
 - [API Testing](tech-essentials-guide/api-testing/rest-assured/get-request-test.java)
 - [CI/CD](tech-essentials-guide/ci-cd/github-actions/)
