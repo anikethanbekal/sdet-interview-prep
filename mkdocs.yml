@@ -44,6 +44,9 @@ edit_uri: edit/feature/docs/
 nav:
   - Home: index.md
   - Cheat-Sheets:
+    - Interview:
+      - Complete Prep Guide: randoms/sdet-interview-prep.md
+      - 30 Days Prep Guide: randoms/30-days-sdet-intreview-prep.md
     - Testing:
       - Automation:
         - Selenium:
@@ -83,6 +86,8 @@ nav:
       - Manual Testing Basics: tech-essentials-guide/testing-concepts/manual-testing-basics.md
     - Programming:
       - Java:
+        - Syllabus: tech-essentials-guide/programming/java/java-syllabus.md
+        - Basics of Java: tech-essentials-guide/programming/java/01-basics.md
         - Advanced OOP in Java: tech-essentials-guide/programming/java/oop.md
         - Java Collections Deep Dive: tech-essentials-guide/programming/java/collections.md
         - Concurrency and Multithreading: tech-essentials-guide/programming/java/concurrency.md

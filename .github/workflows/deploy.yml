@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main # Trigger on pushes to the main branch
-      - feature # Also trigger on feature branch for testing
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
