@@ -1,0 +1,23 @@
+name: Block unauthorized pushes or PRs to feature
+
+on:
+  push:
+    branches:
+      - feature
+  pull_request:
+    branches:
+      - feature
+
+jobs:
+  block-feature-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if actor is repo owner
+        run: |
+          echo "Triggered by: ${{ github.actor }}"
+          if [[ "${{ github.actor }}" != "anikethanbekal" ]]; then
+            echo "❌ Only @anikethanbekal is allowed to push or raise PRs to the feature branch."
+            exit 1
+          else
+            echo "✅ Authorized push or PR to feature branch."
+          fi
