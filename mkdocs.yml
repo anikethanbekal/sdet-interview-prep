@@ -47,6 +47,7 @@ nav:
     - Interview:
       - Complete Prep Guide: randoms/sdet-interview-prep.md
       - 30 Days Prep Guide: randoms/30-days-sdet-intreview-prep.md
+      - Programming questions: randoms/practice-programming-questions.md
     - Testing:
       - Automation:
         - Selenium:
