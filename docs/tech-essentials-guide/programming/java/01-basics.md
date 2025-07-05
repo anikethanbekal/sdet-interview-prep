@@ -1,3 +1,24 @@
+---
+title: Java Basics
+tags:
+  - java
+  - basic
+  - arrays
+  - medium
+categories:
+  - Programming
+  - Interview
+  - Notes
+difficulty: medium
+background: bg-[#fef3c7]
+badge_color: text-yellow-800 bg-yellow-100
+topic: java
+date: 2025-07-05
+author: Anikethan Bekal
+intro: |
+  This is a java basics notes required to know for SDET roles .
+---
+
 # Core Java for SDETs: Compact Notes
 
 These notes provide a quick reference for essential Core Java concepts, tailored for an SDET role.
@@ -71,7 +92,9 @@ These notes provide a quick reference for essential Core Java concepts, tailored
 
 * **Type Casting (Implicit & Explicit):**
     * **Implicit (Widening):** Automatic conversion from smaller to larger data type (e.g., `int` to `long`, `float` to `double`). No data loss.
+        byte -> short -> char -> int -> long -> float -> double
     * **Explicit (Narrowing):** Manual conversion from larger to smaller data type. Requires a cast operator `(type)`. Potential for data loss (e.g., `double` to `int`).
+        double -> float -> long -> int -> char -> short -> byte
         * Example: `int x = (int) 3.14; // x becomes 3`
 
 * **Operators:** Symbols performing operations on operands.
@@ -83,10 +106,15 @@ These notes provide a quick reference for essential Core Java concepts, tailored
     * **Ternary:** `condition ? value_if_true : value_if_false;` (Shorthand `if-else`).
 
 * **Flow Control Statements:** Dictate execution order.
-    * **`if`, `if-else`, `switch`:**
+    * **`if`, `if-else`, `if-else-if-else`, `switch`:**
         * `if (condition) { // code }`
         * `if (condition) { // code } else { // code }`
+        * `if (condition 1) { // code } else if (condition 2) { // code } else { // code }`
         * `switch (expression) { case value: // code; break; default: // code; }` (Java 7+ allows String in switch).
+    * **`short-hand if..else`:**
+        * `variable = (condition) ? expressionTrue :  expressionFalse;`
+        * Example:
+            `String result = (time < 12) ? "Good Morning" : "Good Evening";`
     * **`for`, `while`, `do-while`:**
         * `for (initialization; condition; increment/decrement) { // code }`
         * `while (condition) { // code }` (Executes 0 or more times)
@@ -98,6 +126,32 @@ These notes provide a quick reference for essential Core Java concepts, tailored
 
 * **Arrays:** Ordered collections of fixed-size elements of the same data type.
     * **Single-Dimensional:** `dataType[] arrayName = new dataType[size];` or `dataType[] arrayName = {val1, val2};`
+    ```java
+    //Declare array
+    String[] cars;
+    //insert into array
+    String cars[] = {"TATA", "M&M", "AUDI","BMW"};
+    //Access item from array
+    cars[0]; //TATA
+    //To Change in array
+    cars[3] ="TOYOTA";
+    ```
+
+    ```java
+    //Array ops
+    //Array length
+    cars.length;
+    
+    //Loop into array
+    for(int i=0; i<cars.length;i++){
+        System.out.println(cars[i]);
+    }
+
+    //Using for each
+    for (String carName: cars){
+        System.out.println(carName);
+    }
+    ```
     * **Multidimensional (e.g., 2D):** `dataType[][] matrix = new dataType[rows][cols];`
     * **Array Manipulation Techniques:** Accessing elements (`array[index]`), iterating (loops, for-each), `array.length`, `Arrays.copyOf()`, `System.arraycopy()`.
 
@@ -172,19 +226,29 @@ These notes provide a quick reference for essential Core Java concepts, tailored
         * **Use Case:** When string content needs frequent modification in a multi-threaded context.
 
 * **Common String Methods and Usage:**
-    * `length()`: Returns the number of characters.
-    * `charAt(int index)`: Returns the character at the specified index.
-    * `substring(int beginIndex)`, `substring(int beginIndex, int endIndex)`: Extracts a portion of the string.
-    * `indexOf(char/String)`, `lastIndexOf(char/String)`: Finds the first/last occurrence.
-    * `equals(Object another)`, `equalsIgnoreCase(String another)`: Compares content.
-    * `startsWith(String prefix)`, `endsWith(String suffix)`: Checks prefix/suffix.
-    * `contains(CharSequence s)`: Checks if a string contains a sequence of characters.
-    * `replace(char oldChar, char newChar)`, `replaceAll(String regex, String replacement)`: Replaces characters/sequences.
-    * `trim()`: Removes leading/trailing whitespace.
-    * `toUpperCase()`, `toLowerCase()`: Converts case.
-    * `split(String regex)`: Splits a string into an array of strings based on a delimiter.
-    * `concat(String str)`: Joins two strings (less efficient than `+` or `StringBuilder.append`).
-    * `valueOf(primitiveType)`: Converts primitive types to String.
+    | **Method**                                     | **Syntax**                               | **Example**                                    |
+    |------------------------------------------------|------------------------------------------|------------------------------------------------|
+    | `length()`                                     | `string.length()`                        | `"hello".length()` → `5`                       |
+    | `charAt(int index)`                            | `string.charAt(index)`                   | `"hello".charAt(1)` → `e`                      |
+    | `substring(int beginIndex)`                    | `string.substring(beginIndex)`           | `"hello".substring(2)` → `"llo"`               |
+    | `substring(int beginIndex, int endIndex)`      | `string.substring(beginIndex, endIndex)` | `"hello".substring(1, 4)` → `"ell"`            |
+    | `indexOf(char/String)`                         | `string.indexOf(char/String)`            | `"hello".indexOf('l')` → `2`                   |
+    | `lastIndexOf(char/String)`                     | `string.lastIndexOf(char/String)`        | `"hello".lastIndexOf('l')` → `3`               |
+    | `equals(Object another)`                       | `string.equals(anotherString)`           | `"hello".equals("hello")` → `true`             |
+    | `equalsIgnoreCase(String another)`             | `string.equalsIgnoreCase(anotherString)` | `"hello".equalsIgnoreCase("HELLO")` → `true`   |
+    | `startsWith(String prefix)`                    | `string.startsWith(prefix)`              | `"hello".startsWith("he")` → `true`            |
+    | `endsWith(String suffix)`                      | `string.endsWith(suffix)`                | `"hello".endsWith("lo")` → `true`              |
+    | `contains(CharSequence s)`                     | `string.contains(sequence)`              | `"hello".contains("ell")` → `true`             |
+    | `replace(char oldChar, char newChar)`          | `string.replace(oldChar, newChar)`       | `"hello".replace('l', 'p')` → `"heppo"`        |
+    | `replaceAll(String regex, String replacement)` | `string.replaceAll(regex, replacement)`  | `"hello123".replaceAll("\\d", "")` → `"hello"` |
+    | `trim()`                                       | `string.trim()`                          | `"  hello  ".trim()` → `"hello"`               |
+    | `toUpperCase()`                                | `string.toUpperCase()`                   | `"hello".toUpperCase()` → `"HELLO"`            |
+    | `toLowerCase()`                                | `string.toLowerCase()`                   | `"HELLO".toLowerCase()` → `"hello"`            |
+    | `split(String regex)`                          | `string.split(regex)`                    | `"a,b,c".split(",")` → `["a", "b", "c"]`       |
+    | `concat(String str)`                           | `string.concat(str)`                     | `"hello".concat(" world")` → `"hello world"`   |
+    | `valueOf(primitiveType)`                       | `String.valueOf(primitiveType)`          | `String.valueOf(123)` → `"123"`                |
+
+---
 
 * **String Comparison and Immutability:**
     * **Comparison:**
