@@ -1,0 +1,143 @@
+/* General Body and Typography */
+body {
+  background: #f7f9fb;
+  color: #222;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 17px; /* Slightly smaller for better density */
+  line-height: 1.6; /* Improved line height for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2a3a4d;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 2.5rem; /* More space above headings */
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Styling */
+.md-sidebar, .md-sidebar__scrollwrap, .md-sidebar__inner {
+  background: #f0f4fa;
+}
+
+/* Main Content Area */
+.md-content, .md-main__inner {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+  padding: 2rem; /* Consistent padding */
+  max-width: 900px; /* Limit content width for readability on large screens */
+  margin: 0 auto; /* Center content */
+}
+
+/* Navigation Links in Sidebar */
+.md-nav__link {
+  color: #444;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  transition: background 0.2s, color 0.2s;
+}
+.md-nav__link:hover, .md-nav__link:focus {
+  background: #e0e7ef;
+  color: #222;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+/* Ensure parent containers allow sticky positioning */
+.md-content, .md-typeset {
+  overflow: visible !important;
+}
+
+/* Sticky section headers for MkDocs/Material */
+.md-content .md-typeset h2,
+.md-content .md-typeset h3,
+.md-content .md-typeset h4,
+.md-content .md-typeset h5,
+.md-content .md-typeset h6 {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-shadow: 0 2px 6px -4px rgba(0,0,0,0.1); /* Softer shadow */
+}
+
+/* Add offset for each header level to avoid overlap */
+.md-content .md-typeset h3 { top: 2.5em; }
+.md-content .md-typeset h4 { top: 4em; }
+.md-content .md-typeset h5 { top: 5.5em; }
+.md-content .md-typeset h6 { top: 7em; }
+
+/* Sticky table headers */
+table th {
+  position: sticky;
+  top: 0;
+  background: #f0f4fa;
+  z-index: 3;
+  box-shadow: 0 2px 6px -4px rgba(0,0,0,0.1); /* Softer shadow */
+}
+
+/* Responsive Tables */
+.md-typeset table {
+  display: block;
+  overflow-x: auto; /* Enable horizontal scrolling for tables on small screens */
+  white-space: nowrap; /* Prevent text wrapping in table cells */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.md-typeset table th, .md-typeset table td {
+  white-space: normal; /* Allow text to wrap within cells if needed */
+}
+
+/* Code Block Scrolling */
+.md-typeset pre > code {
+  display: block;
+  overflow-x: auto; /* Ensure code blocks scroll horizontally */
+  padding: 1em; /* Add some padding inside code blocks */
+}
+
+/* Adjustments for smaller screens (mobile) */
+@media screen and (max-width: 76.1875em) { /* MkDocs Material's tablet breakpoint */
+  .md-content, .md-main__inner {
+    padding: 1rem; /* Reduce padding on smaller screens */
+    border-radius: 0; /* Remove border-radius on full-width mobile */
+    box-shadow: none; /* Remove shadow on mobile */
+  }
+
+  body {
+    font-size: 16px; /* Slightly smaller base font for mobile */
+  }
+
+  .md-typeset table {
+    width: 100%; /* Ensure tables take full width */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 30em) { /* Common phone breakpoint */
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.3em; }
+}
