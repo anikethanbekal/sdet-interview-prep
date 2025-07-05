@@ -89,6 +89,8 @@ nav:
       - Java:
         - Syllabus: tech-essentials-guide/programming/java/java-syllabus.md
         - Basics of Java: tech-essentials-guide/programming/java/01-basics.md
+        - OOPS part 1 (Basics, Encapsulation, Inheritance): tech-essentials-guide/programming/java/02-oops.md
+        - OOPS part 2 (Abstraction and Interface): tech-essentials-guide/programming/java/03-interfaces-abstract-classes.md
       - Python:
         - Advanced Data Structures: tech-essentials-guide/programming/python/data-structures.md
         - Functional Programming in Python: tech-essentials-guide/programming/python/functional-programming.md
